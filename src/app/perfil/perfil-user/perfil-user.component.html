@@ -1,1 +1,31 @@
-<p>perfil-user works!</p>
+<div class="registration-container">
+    <h2>Registro de Usuario</h2>
+    <div>
+      <label for="username">Nombre de usuario:</label>
+      <input id="username" [(ngModel)]="userName" placeholder="Ingrese su nombre de usuario" />
+    </div>
+  
+    <div class="image-selection">
+      <h3>Seleccione un avatar:</h3>
+      <div class="image-grid">
+        <img 
+          *ngFor="let image of images" 
+          [src]="image" 
+          [class.selected]="image === selectedImage"
+          (click)="selectImage(image)"
+          alt="avatar" 
+          class="avatar-image"
+        />
+      </div>
+    </div>
+  
+    <button (click)="register()">Registrar</button>
+  
+    <div *ngIf="user.name">
+      <h4>Información del usuario:</h4>
+      <p>Nombre: {{ user.name }}</p>
+      <p>Avatar seleccionado:</p>
+      <img [src]="user.selectedImage" alt="avatar" class="avatar-image"/>
+      <p>Victorias: {{ user.victories }}</p>
+    </div>
+  </div>
