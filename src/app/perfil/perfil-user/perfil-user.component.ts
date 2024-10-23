@@ -1,43 +1,44 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-perfil-user',
-  standalone: true,
-  imports: [],
   templateUrl: './perfil-user.component.html',
-  styleUrl: './perfil-user.component.scss'
+  styleUrls: ['./perfil-user.component.css']
 })
 export class PerfilUserComponent {
 
-  userName: string = '';
-  selectedImage: string = '';
-  images: string[] = [
-    'assets/img/avatar1.png',
-    'assets/img/avatar2.png',
-    'assets/img/avatar3.png',
+  perfilForm: FormGroup;
+  imagenes = [
+    'assets/imagen1.png',
+    'assets/imagen2.png',
+    'assets/imagen3.png'
   ];
+  imagenSeleccionada: number | null = null;
 
-  user = {
-    name: '',
-    selectedImage: '',
-    victories: 0
-  };
-
-  selectImage(imageUrl: string): void {
-    this.selectedImage = imageUrl;
+  constructor(private fb: FormBuilder) {
+    this.perfilForm = this.fb.group({
+      nombre: ['', Validators.required]
+    });
   }
 
-  register(): void {
-    if (this.userName && this.selectedImage) {
-      this.user.name = this.userName;
-      this.user.selectedImage = this.selectedImage;
-      this.user.victories = 0;
+  seleccionarImagen(index: number) {
+    this.imagenSeleccionada = index;
+  }
 
-      console.log('Usuario registrado:', this.user);
-      alert('¡Registro exitoso!');
+  onSubmit() {
+    if (this.perfilForm.valid && this.imagenSeleccionada !== null) {
+      const nombre = this.perfilForm.value.nombre;
+      const imagenSeleccionada = this.imagenes[this.imagenSeleccionada];
+
+      console.log('Nombre:', nombre);
+      console.log('Imagen seleccionada:', imagenSeleccionada);
+
     } else {
-      alert('Por favor, ingrese un nombre de usuario y seleccione una imagen.');
+      console.log('Formulario inválido o no se ha seleccionado una imagen');
     }
   }
+  
 
 }

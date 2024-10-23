@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { PerfilUserComponent } from './perfil-user/perfil-user.component';
 
 @NgModule({
-  declarations: [PerfilUserComponent],
+  declarations: [],
   imports: [
     CommonModule,
     FormsModule
   ],
-  exports: [PerfilUserComponent]
+
 })
 export class PerfilModule { }
