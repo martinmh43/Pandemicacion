@@ -12,7 +12,7 @@ body {
   margin-left: 600px;
   margin-top: 100px;
   width: 350px;
-  height: 500px;
+  height: 530px;
   background: red;
   overflow: hidden;
   background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38")
@@ -50,8 +50,8 @@ input {
   outline: none;
   border-radius: 5px;
 }
-button {
-  
+
+.inicio {
   width: 60%;
   height: 40px;
   margin: 10px auto;
@@ -68,14 +68,15 @@ button {
   transition: 0.2s ease-in;
   cursor: pointer;
 }
-button:hover {
+
+.inicio:hover {
   background: #6d44b8;
 }
 
 /*iniciciar sesion */
 
 .iniciar-sesion {
-  height: 450px;
+  height: 480px;
   padding-top: 0px;
   background: #eee;
   border-radius: 60% / 10%;
@@ -84,11 +85,11 @@ button:hover {
 }
 .iniciar-sesion label {
   color: #573b8a;
-  transform: scale(0.6);
+  transform: scale(0.5);
 }
 
 #chk:checked ~ .iniciar-sesion {
-  transform: translateY(-500px);
+  transform: translateY(-550px);
 }
 #chk:checked ~ .iniciar-sesion label {
   transform: scale(1);

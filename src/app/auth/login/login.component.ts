@@ -9,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  showPassword: boolean = false;
+  showLoginPassword: boolean = false;
+
+  togglePasswordVisibility(type: string): void {
+    if (type === 'register') {
+      this.showPassword = !this.showPassword;
+    } else if (type === 'login') {
+      this.showLoginPassword = !this.showLoginPassword;
+    }
+  }
+
 }
