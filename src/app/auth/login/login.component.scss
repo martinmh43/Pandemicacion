@@ -85,6 +85,7 @@ input {
   transition: 0.8s ease-in-out;
 }
 .iniciar-sesion label {
+  padding-top: 12px;
   color: #573b8a;
   transform: scale(0.5);
 }
@@ -97,4 +98,29 @@ input {
 }
 #chk:checked ~ .registro label {
   transform: scale(0.6);
+}
+
+.mosOc {
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #573b8a;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+.mosOc2 {
+  position: absolute;
+  right: 55px;
+  top: 32.7%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #573b8a;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
 }
