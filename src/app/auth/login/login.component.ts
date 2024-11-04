@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,12 @@ export class LoginComponent {
     } else if (type === 'login') {
       this.showLoginPassword = !this.showLoginPassword;
     }
+  }
+
+  constructor(private router: Router) {}
+
+  routacion(name: string) {
+    this.router.navigate([`/${name}`]);
   }
 
 }
