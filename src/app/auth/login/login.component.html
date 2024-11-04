@@ -1,33 +1,33 @@
-<div class="principal">  	
+<div class="principal">
   <input type="checkbox" id="chk" aria-hidden="true">
 
-    <div class="registro">
-      <form>
-        <label for="chk" aria-hidden="true">Registrarse</label>
-        <input type="nombre" name="txt" placeholder="Nombre de usuario" required="">
-        <input type="email" name="email" placeholder="Correo electrónico" required="">
-        <input type="tel" name="num" placeholder="Número de teléfono" required="">
-        <div class="password-container">
-          <input [type]="showPassword ? 'text' : 'password'" name="contra" placeholder="Contraseña" required="">
-          <button type="button" class="mosOc" (click)="togglePasswordVisibility('register')">
-            {{ showPassword ? 'Ocultar' : 'Mostrar' }}
-          </button>
-        </div>
-        <button class="inicio">Registrarse</button>
-      </form>
-    </div>
+  <div class="registro">
+    <form>
+      <label for="chk" aria-hidden="true">Registrarse</label>
+      <input type="nombre" name="txt" placeholder="Nombre de usuario" required="">
+      <input type="email" name="email" placeholder="Correo electrónico" required="">
+      <input formControlName="mobileNumber" id="mobileNumber" type="text" class="form-control">
+      <div class="password-container">
+        <input [type]="showPassword ? 'text' : 'password'" name="contra" placeholder="Contraseña" required="">
+        <button type="button" class="mosOc" (click)="togglePasswordVisibility('register')">
+          {{ showPassword ? 'Ocultar' : 'Mostrar' }}
+        </button>
+      </div>
+      <button class="inicio">Registrarse</button>
+    </form>
+  </div>
 
-    <div class="iniciar-sesion">
-      <form>
-        <label for="chk" aria-hidden="true">Iniciar sesión</label>
-        <input type="email" name="email" placeholder="Correo electrónico" required="">
-        <div class="password-container">
-          <input [type]="showLoginPassword ? 'text' : 'password'" name="contra" placeholder="Contraseña" required="">
-          <button type="button" class="mosOc2" (click)="togglePasswordVisibility('login')">
-            {{ showLoginPassword ? 'Ocultar' : 'Mostrar' }}
-          </button>
-        </div>
-        <button class="inicio">Iniciar sesión</button>
-      </form>
-    </div>
+  <div class="iniciar-sesion">
+    <form>
+      <label for="chk" aria-hidden="true">Iniciar sesión</label>
+      <input type="email" name="email" placeholder="Correo electrónico" required="">
+      <div class="password-container">
+        <input [type]="showLoginPassword ? 'text' : 'password'" name="contra" placeholder="Contraseña" required="">
+        <button type="button" class="mosOc2" (click)="togglePasswordVisibility('login')">
+          {{ showLoginPassword ? 'Ocultar' : 'Mostrar' }}
+        </button>
+      </div>
+      <button class="inicio">Iniciar sesión</button>
+    </form>
+  </div>
 </div>
