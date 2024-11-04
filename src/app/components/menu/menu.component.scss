@@ -1,0 +1,60 @@
+$primary-color: #007bff;
+$primary-hover-color: #0056b3;
+$secondary-color: #28a745;
+$secondary-hover-color: #218838;
+$background-color: #f0f0f0;
+$button-padding: 12px;
+$button-font-size: 18px;
+$button-border-radius: 5px;
+
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    background-color: $background-color;
+
+    .profile-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 16px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: $secondary-color;
+      color: #ffffff;
+      border: none;
+      border-radius: $button-border-radius;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: $secondary-hover-color;
+      }
+    }
+    .menu-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 200px;
+    
+        button {
+          padding: $button-padding;
+          font-size: $button-font-size;
+          font-weight: bold;
+          background-color: $primary-color;
+          color: #ffffff;
+          border: none;
+          border-radius: $button-border-radius;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+    
+          &:hover {
+            background-color: $primary-hover-color;
+          }
+        }
+      }
+    }
