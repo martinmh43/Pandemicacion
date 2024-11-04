@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-autores',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './autores.component.scss'
 })
 export class AutoresComponent {
+  constructor(private router: Router) {}
 
+  routacion(name: string) {
+    this.router.navigate([`/${name}`]);
+  }
 }

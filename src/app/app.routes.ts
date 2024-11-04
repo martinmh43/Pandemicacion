@@ -18,6 +18,7 @@ export const routes: Routes = [
     { path: 'ranking', component: RankingComponent }, // Ruta para ranking
     { path: 'autores', component: AutoresComponent }, // Ruta para autores
     { path: 'versiones', component: VersionesComponent }, // Ruta para versiones
+    { path: 'menu', component: MenuComponent }, // Ruta para volver
     { path: '**', component: NotfoundComponent } // Ruta para no encontrados
 ];
 
