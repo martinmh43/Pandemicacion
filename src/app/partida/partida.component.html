@@ -8,9 +8,8 @@
       <div class="cities">
         <div 
           class="ciudad" 
-          *ngFor="let ciudad of ciudades"
           [ngStyle]="{'left': ciudad.coordenadasX + 'px', 'top': ciudad.coordenadasY + 'px'}"
-        >
+          *ngFor="let ciudad of ciudades">
           {{ ciudad.nombre }}
         </div>
       </div>
