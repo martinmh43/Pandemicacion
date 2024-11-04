@@ -1,12 +1,12 @@
 <div class="menu-container">
-  <button class="profile-button" routerLink="/login">Perfil</button>
+  <button class="profile-button" (click)="routacion('login')">Perfil</button>
 
   <div class="menu-buttons">
-    <button routerLink="/partida">Nueva partida</button>
-    <button routerLink="/cargar-partida">Cargar partida</button>
-    <button routerLink="/informacion">Información</button>
-    <button routerLink="/ranking">Ranking</button>
-    <button routerLink="/autores">Autores</button>
-    <button routerLink="/versiones">Versiones</button>
+    <button (click)="routacion('partida')">Nueva partida</button>
+    <button (click)="routacion('cargar-partida')">Cargar partida</button>
+    <button (click)="routacion('informacion')">Información</button>
+    <button (click)="routacion('ranking')">Ranking</button>
+    <button (click)="routacion('autores')">Autores</button>
+    <button (click)="routacion('versiones')">Versiones</button>
   </div>
 </div>
