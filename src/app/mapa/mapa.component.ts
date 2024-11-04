@@ -9,14 +9,10 @@ import { CiudadComponent } from '../components/ciudad/ciudad.component';
   styleUrls: ['./mapa.component.scss']
 })
 export class MapaComponent implements OnInit {
-  ciudades: CiudadComponent[] = [];
 
-  ngOnInit() {
-    this.procesarDatosCiudades();
-  }
+  ciudades: any[] = [];
 
-  procesarDatosCiudades() {
-    const datos = `San Francisco;0;235,315;Chicago,Los Angeles,Manila,Tokio;
+  datos = `San Francisco;0;235,315;Chicago,Los Angeles,Manila,Tokio;
 Chicago;0;300,280;San Francisco,Montreal,Atlanta,Mexico DF,Los Angeles;
 Atlanta;0;320,320;Chicago,Miami,Washington;
 Montreal;0;350,280;Chicago,Nueva York, Washington;
@@ -65,20 +61,27 @@ Taipei;1;1205,375;Osaka,Shanghai,Hong Kong,Manila;
 Ho Chi Minh;1;1148,429;Yakarta,Bangkok,Hong Kong,Manila;
 Manila;1;1200,420;San Francisco,Ho Chi Minh,Taipei,Hong Kong,Sidney;
 Sidney;1;1320,645;Los Angeles,Manila,Yakarta;`;
-const lineas = datos.split('\n');
 
-    lineas.forEach(linea => {
-      const [nombre, idEnfermedad, coordenadas, conexiones] = linea.split(';');
-      const [coordenadasX, coordenadasY] = coordenadas.split(',').map(Number);
-      const conexionesArray = conexiones ? conexiones.split(',') : [];
+ngOnInit() {
+  this.procesarDatosCiudades();
+}
 
-      this.ciudades.push({
-        nombre,
-        idEnfermedad: +idEnfermedad,
-        coordenadasX,
-        coordenadasY,
-        conexiones: conexionesArray
-      });
+procesarDatosCiudades() {
+  const lineas = this.datos.split('\n');
+
+  lineas.forEach(linea => {
+    const [nombre, idEnfermedad, coordenadas, conexiones] = linea.split(';');
+    const [coordenadasX, coordenadasY] = coordenadas.split(',').map(Number);
+    const conexionesArray = conexiones ? conexiones.split(',') : [];
+
+    this.ciudades.push({
+      nombre: nombre.trim(),
+      idEnfermedad: +idEnfermedad,
+      coordenadasX,
+      coordenadasY,
+      conexiones: conexionesArray
     });
-  }
+  });
+}
+
 }
