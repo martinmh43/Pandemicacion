@@ -1,18 +1,15 @@
-<!-- <div class="partida-container">
-    <h1>¡Bienvenido a la Partida!</h1>
-    <p>Aquí es donde se desarrollará el juego.</p>
-  
-    <div class="map-container">
-      <img src="assets/world-map.jpg" alt="Mapa del mundo" class="map-image" />
-      
-      <div class="cities">
-        <div 
-          class="ciudad" 
-          [ngStyle]="{'left': ciudad.coordenadasX + 'px', 'top': ciudad.coordenadasY + 'px'}"
-          *ngFor="let ciudad of ciudades">
-          {{ ciudad.nombre }}
-        </div>
+<div class="partida-container">
+  <h1>¡Bienvenido a la Partida!</h1>
+  <p>Aquí es donde se desarrollará el juego.</p>
+
+  <div class="map-container">
+    <img src="assets/world-map.jpg" alt="Mapa del mundo" class="map-image" />
+
+    <div class="cities">
+      <div class="ciudad" [ngStyle]="{'left': ciudad.coordenadasX + 'px', 'top': ciudad.coordenadasY + 'px'}"
+        *ngFor="let ciudad of ciudades">
+        {{ ciudad.nombre }}
       </div>
     </div>
   </div>
-   -->
+</div>
