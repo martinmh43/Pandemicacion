@@ -1,9 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-partida',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './partida.component.html',
-  styleUrls: ['./partida.component.scss']
+  styleUrls: ['./partida.component.scss'],
+  
 })
 export class PartidaComponent {
   constructor() { }
