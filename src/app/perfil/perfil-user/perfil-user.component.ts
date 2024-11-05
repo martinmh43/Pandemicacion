@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-perfil-user',
   templateUrl: './perfil-user.component.html',
-  styleUrls: ['./perfil-user.component.css']
+  styleUrls: ['./perfil-user.component.scss']
 })
 export class PerfilUserComponent {
 
