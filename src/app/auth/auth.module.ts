@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { AuthRoutingModule } from './auth-routing.module';
 
 
 
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     MatStepperModule, 
     MatFormFieldModule,
     MatInputModule, 
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    AuthRoutingModule
   ]
 })
 export class AuthModule { }
