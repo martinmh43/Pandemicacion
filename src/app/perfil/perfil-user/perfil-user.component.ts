@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class PerfilUserComponent {
   ];
   imagenSeleccionada: number | null = null;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.perfilForm = this.fb.group({
       nombre: ['', Validators.required]
     });
@@ -38,6 +39,10 @@ export class PerfilUserComponent {
     } else {
       console.log('Formulario inválido o no se ha seleccionado una imagen');
     }
+  }
+
+  routacion(name: string) {
+    this.router.navigate([`/${name}`]);
   }
   
 }

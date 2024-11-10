@@ -8,10 +8,11 @@ import { InformacionComponent } from './informacion/informacion.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { AutoresComponent } from './autores/autores.component';
 import { VersionesComponent } from './versiones/versiones.component';
-import { PerfilModule } from './perfil/perfil.module';
+import { PerfilUserComponent } from './perfil/perfil.module';
 
 export const routes: Routes = [
     { path: '', component: LoginComponent },  // Ruta principal
+    { path: 'perfil', component: PerfilUserComponent },
     { path: 'menu', component: MenuComponent }, // Ruta para el menú
     { path: 'login', component: LoginComponent }, // Ruta para login
     { path: 'partida', component: PartidaComponent }, // Ruta para partida

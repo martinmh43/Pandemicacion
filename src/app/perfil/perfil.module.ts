@@ -11,3 +11,5 @@ import { PerfilUserComponent } from './perfil-user/perfil-user.component';
   ]
 })
 export class PerfilModule { }
+export { PerfilUserComponent };
+
