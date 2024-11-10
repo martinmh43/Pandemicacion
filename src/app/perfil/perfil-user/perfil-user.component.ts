@@ -14,7 +14,7 @@ export class PerfilUserComponent {
   imagenes = [
     'assets/avatar1.png',
     'assets/avatar2.png',
-    'assets/avatar3.png'
+    'assets/avatar3.png',
   ];
   imagenSeleccionada: number | null = null;
 
@@ -35,6 +35,7 @@ export class PerfilUserComponent {
 
       console.log('Nombre:', nombre);
       console.log('Imagen seleccionada:', imagenSeleccionada);
+      //Para tener un feedback x consola de q vaya bien
 
     } else {
       console.log('Formulario inválido o no se ha seleccionado una imagen');
