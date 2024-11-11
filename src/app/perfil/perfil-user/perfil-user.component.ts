@@ -12,9 +12,9 @@ export class PerfilUserComponent {
 
   perfilForm: FormGroup;
   imagenes = [
-    'assets/avatar1.png',
-    'assets/avatar2.png',
-    'assets/avatar3.png',
+    'images/avatar1.png',
+    'images/avatar2.png',
+    'images/avatar3.png',
   ];
   imagenSeleccionada: number | null = null;
 
