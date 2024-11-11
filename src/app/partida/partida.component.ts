@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,8 +12,14 @@ import { Component } from '@angular/core';
   
 })
 export class PartidaComponent {
-  constructor() { }
 
   // Aquí agregamos métodos para manejar la lógica de la partida que
   // ya iremos haciendo asi q no rayarse
+
+
+  constructor(private router: Router) {}
+
+  routacion(name: string) {
+    this.router.navigate([`/${name}`]);
+  }
 }
