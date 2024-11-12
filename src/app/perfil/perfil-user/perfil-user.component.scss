@@ -1,19 +1,91 @@
+
+form {
+  max-width: 400px;
+  margin-top: 200px;
+  margin-left: 35%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+
 .imagen-opciones {
   display: flex;
   gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .opcion-imagen {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   border: 2px solid transparent;
-  border-radius: 5px;
-  transition: border-color 0.3s;
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.opcion-imagen:hover {
+  transform: scale(1.1);
 }
 
 .opcion-imagen.seleccionada {
   border-color: #007bff;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  text-align: center;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background-color: #218838;
 }
 
 .volver{
