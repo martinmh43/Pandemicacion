@@ -32,3 +32,15 @@
   background-color: rgb(164, 6, 138);;
   transform: translateY(-2px);
 }
+
+
+.punto {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 50%;
+  font-size: 0.8em;
+  text-align: center;
+}
