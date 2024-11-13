@@ -1,5 +1,6 @@
 .partida-container {
   position: relative;
+  user-select: none;  //ESTO HAY Q QUITARLO LUEGOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO (hace q no se pueda hacer click)
 }
 
 .map-container {
@@ -13,6 +14,19 @@
   width: 100%;
   height: auto;
 }
+
+.punto {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-color: rgba(201, 193, 171, 0.603);
+  border-radius: 2%;
+  color: rgb(0, 0, 0);
+  padding: 2px 4px;
+  border-radius: 50%;
+  font-size: 0.8em;
+  text-align: center;
+}
+
 
 
 
@@ -34,13 +48,4 @@
 }
 
 
-.punto {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  background-color: red;
-  color: white;
-  padding: 2px 4px;
-  border-radius: 50%;
-  font-size: 0.8em;
-  text-align: center;
-}
+
