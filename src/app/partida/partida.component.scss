@@ -14,21 +14,35 @@
   width: 100%;
   height: auto;
 }
-
 .punto {
   position: absolute;
   transform: translate(-50%, -50%);
-  border-color: rgba(201, 193, 171, 0.603);
-  border-radius: 2%;
-  color: rgb(0, 0, 0);
-  padding: 2px 4px;
-  border-radius: 50%;
-  font-size: 0.8em;
   text-align: center;
 }
 
+.boton-punto {
+  background-color: #f39c12;
+  border: none;
+  border-radius: 50%;
+  width: 1vh; 
+  height: 1.5vh;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.2s, background-color 0.3s;
+}
 
+.boton-punto:hover {
+  background-color: #e67e22;
+  transform: scale(1.1);
+}
 
+.nombre-ciudad {
+  display: block;
+  margin-top: 1%;
+  font-size: 0.8em; 
+  color: #333; 
+}
 
 .volver{
   position: absolute;

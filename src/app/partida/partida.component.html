@@ -2,8 +2,12 @@
   <div class="map-container">
     <img src="images/mapa.png" alt="Mapa del mundo" class="map-image" />
     <div *ngFor="let punto of puntos" class="punto" [style.left.px]="punto.x" [style.top.px]="punto.y">
-      {{ punto.ciudad }}
+      <button class="boton-punto" (click)="onPuntoClick(punto.ciudad)">
+      </button>
+      <span class="nombre-ciudad">{{ punto.ciudad }}</span>
     </div>
+
+
   </div>
   <button (click)="routacion('menu')" class="volver">Menu Principal</button>
 </div>
