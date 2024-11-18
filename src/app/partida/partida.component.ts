@@ -77,15 +77,22 @@ export class PartidaComponent {
     puntos: { ciudad: string; x: number; y: number }[] = [];
   
     ngOnInit() {
+      const mapaOriginalWidth = 1288; 
+      const mapaOriginalHeight = 575; 
+    
       for (let i = 0; i < this.dataStrings.length; i++) {
         const line = this.dataStrings[i];
         const partes = line.split(';');
         const ciudad = partes[0];
-        const [x, y] = partes[2].split(',').map(Number); 
+        const [x, y] = partes[2].split(',').map(Number);
   
-        this.puntos.push({ ciudad, x, y });
+        const xPercent = (x / mapaOriginalWidth) * 100;
+        const yPercent = (y / mapaOriginalHeight) * 100;
+    
+        this.puntos.push({ ciudad, x: xPercent, y: yPercent });
       }
     }
+    
 
     onPuntoClick(ciudad: string) {
       console.log(`Has hecho clic en: ${ciudad}`); // Las movidas de cada ciudad aqui
