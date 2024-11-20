@@ -22,6 +22,7 @@ export class MapaComponent implements OnInit {
     this.procesarDatosCiudades();
   }
 
+  
   procesarDatosCiudades() {
     this.http.get<any[]>('ciudades.json').subscribe(data => {
       this.ciudades = data.map(ciudad => ({
