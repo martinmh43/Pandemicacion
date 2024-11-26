@@ -140,7 +140,7 @@
   {
     "nombre": "Johannesburgo",
     "idEnfermedad": 3,
-    "coordenadas": {"x": 838, "y": 590},
+    "coordenadas": {"x": 838, "y": 585},
     "conexiones": ["Kinsasa", "Jartum"]
   },
   {
@@ -278,13 +278,13 @@
   {
     "nombre": "Manila",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1268, "y": 390},
+    "coordenadas": {"x": 1232, "y": 370},
     "conexiones": ["Taipei", "Hong Kong", "Ho Chi Minh", "Yakarta", "San Francisco"]
   },
   {
     "nombre": "Sidney",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1343, "y": 520},
+    "coordenadas": {"x": 1355, "y": 620},
     "conexiones": ["Los Angeles", "Yakarta"]
   }
 ]
