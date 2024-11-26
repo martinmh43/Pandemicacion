@@ -1,5 +1,5 @@
 
-export interface usuarios {
+export interface Usuario {
 
     nombre : String | undefined | null;
     password : String | undefined | null;
