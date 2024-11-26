@@ -13,11 +13,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   register (usuario : usuarios): Observable<any> {
-    return this.http.post(this.apiUrl + 'insertar_usuario.php', JSON.stringify(usuario));
+    return this.http.post(this.apiUrl + 'register.php', JSON.stringify(usuario));
   }
 
   login (usuario : usuarios): Observable<any> {
-    return this.http.post(this.apiUrl + 'logear_usuario.php', JSON.stringify(usuario));
+    return this.http.post(this.apiUrl + 'login.php', JSON.stringify(usuario));
   }
 
 

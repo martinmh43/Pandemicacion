@@ -50,7 +50,6 @@ export class LoginComponent {
           console.log("Registrado manito");
         }
       );
-
     } else {
       console.log("Datos incorrectos loquin");
     }
