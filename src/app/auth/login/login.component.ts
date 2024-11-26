@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { usuarios} from '../../models/usuarios.model';
 
 @Component({
   selector: 'app-login',
@@ -20,9 +23,36 @@ export class LoginComponent {
       this.showLoginPassword = !this.showLoginPassword;
     }
   }
-  constructor(private router: Router) {}
 
   routacion(name: string) {
     this.router.navigate([`/${name}`]);
+  }
+
+  constructor(private auth:AuthService, private router: Router) { }
+
+  miFormulario = new FormGroup({
+    nombre: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
+    password: new FormControl('',[Validators.required, Validators.minLength(6)]),
+    email: new FormControl('',[Validators.required, Validators.email]),
+    message: new FormControl('',[Validators.required])
+  })
+
+  enviar () {
+    if (this.miFormulario.valid) {
+      const usuario: usuarios = {
+        nombre: this.miFormulario.value.nombre,
+        password: this.miFormulario.value.password,
+        email: this.miFormulario.value.email
+      }
+
+      this.auth.register(usuario).subscribe(
+        response => {
+          console.log("Registrado manito");
+        }
+      );
+
+    } else {
+      console.log("Datos incorrectos loquin");
+    }
   }
 }

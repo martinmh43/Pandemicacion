@@ -48,6 +48,11 @@ export class PartidaComponent {
   }
 
   onPuntoClick(ciudad: string) {
-    console.log(`Has hecho clic en: ${ciudad}`); // Las movidas de cada ciudad aquí
+    console.log(`Has hecho clic en: ${ciudad}`); 
   }
+
+  // Las movidas de cada ciudad aquí
+
+
+
 }
