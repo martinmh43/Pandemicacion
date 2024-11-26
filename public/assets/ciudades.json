@@ -140,7 +140,7 @@
   {
     "nombre": "Johannesburgo",
     "idEnfermedad": 3,
-    "coordenadas": {"x": 838, "y": 590},
+    "coordenadas": {"x": 838, "y": 585},
     "conexiones": ["Kinsasa", "Jartum"]
   },
   {
@@ -206,85 +206,85 @@
   {
     "nombre": "Calcuta",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1058, "y": 310},
+    "coordenadas": {"x": 1088, "y": 310},
     "conexiones": ["Nueva Delhi", "Bangkok", "Hong Kong", "Chennai"]
   },
   {
     "nombre": "Chennai",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1053, "y": 400},
+    "coordenadas": {"x": 1083, "y": 400},
     "conexiones": ["Bombay", "Calcuta", "Bangkok", "Yakarta"]
   },
   {
     "nombre": "Bangkok",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1108, "y": 375},
+    "coordenadas": {"x": 1138, "y": 375},
     "conexiones": ["Calcuta", "Chennai", "Hong Kong", "Ho Chi Minh", "Yakarta"]
   },
   {
     "nombre": "Yakarta",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1133, "y": 470},
+    "coordenadas": {"x": 1163, "y": 470},
     "conexiones": ["Chennai", "Bangkok", "Ho Chi Minh", "Sidney"]
   },
   {
     "nombre": "Ho Chi Minh",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1158, "y": 430},
+    "coordenadas": {"x": 1188, "y": 430},
     "conexiones": ["Bangkok", "Hong Kong", "Yakarta", "Manila"]
   },
   {
     "nombre": "Hong Kong",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1158, "y": 340},
+    "coordenadas": {"x": 1188, "y": 340},
     "conexiones": ["Bangkok", "Ho Chi Minh", "Manila", "Shanghai", "Taipei"]
   },
   {
     "nombre": "Shanghai",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1183, "y": 270},
+    "coordenadas": {"x": 1213, "y": 270},
     "conexiones": ["Hong Kong", "Taipei", "Beijing", "Seul", "Tokio"]
   },
   {
     "nombre": "Taipei",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1208, "y": 320},
+    "coordenadas": {"x": 1238, "y": 320},
     "conexiones": ["Shanghai", "Hong Kong", "Osaka", "Manila"]
   },
   {
     "nombre": "Beijing",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1183, "y": 230},
+    "coordenadas": {"x": 1213, "y": 230},
     "conexiones": ["Shanghai", "Seul"]
   },
   {
     "nombre": "Seul",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1213, "y": 200},
+    "coordenadas": {"x": 1243, "y": 200},
     "conexiones": ["Beijing", "Tokio"]
   },
   {
     "nombre": "Tokio",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1268, "y": 225},
+    "coordenadas": {"x": 1298, "y": 225},
     "conexiones": ["Shanghai", "Seul", "Osaka", "San Francisco"]
   },
   {
     "nombre": "Osaka",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1268, "y": 270},
+    "coordenadas": {"x": 1298, "y": 270},
     "conexiones": ["Tokio", "Taipei"]
   },
   {
     "nombre": "Manila",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1238, "y": 390},
+    "coordenadas": {"x": 1232, "y": 370},
     "conexiones": ["Taipei", "Hong Kong", "Ho Chi Minh", "Yakarta", "San Francisco"]
   },
   {
     "nombre": "Sidney",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1313, "y": 520},
+    "coordenadas": {"x": 1355, "y": 620},
     "conexiones": ["Los Angeles", "Yakarta"]
   }
 ]
