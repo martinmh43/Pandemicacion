@@ -8,7 +8,7 @@ import { Usuario } from '../models/usuarios.model';
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost//';
+  private apiUrl = 'http://localhost/';
 
   constructor(private http: HttpClient) { }
 
@@ -19,9 +19,4 @@ export class AuthService {
   login (usuario : Usuario): Observable<any> {
     return this.http.post(this.apiUrl + 'login.php', JSON.stringify(usuario));
   }
-
-
-
-
-
 }

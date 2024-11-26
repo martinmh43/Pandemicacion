@@ -28,8 +28,8 @@ export class RegisterComponent {
 
       const usuario: Usuario = {
         nombre: this.miFormulario.value.nombre,
-        password: this.miFormulario.value.email,
-        email: undefined
+        email: this.miFormulario.value.email,
+        password: undefined
       }
 
       this.authService.register(usuario).subscribe(
