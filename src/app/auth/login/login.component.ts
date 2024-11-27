@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { usuarios} from '../../models/usuarios.model';
+import { Usuario} from '../../models/usuario.model';
 
 @Component({
   selector: 'app-login',
@@ -39,7 +39,7 @@ export class LoginComponent {
 
   enviar () {
     if (this.miFormulario.valid) {
-      const usuario: usuarios = {
+      const usuario: Usuario = {
         nombre: this.miFormulario.value.nombre,
         password: this.miFormulario.value.password,
         email: this.miFormulario.value.email
@@ -47,6 +47,7 @@ export class LoginComponent {
 
       this.auth.register(usuario).subscribe(
         response => {
+          console.log(usuario)
           console.log("Registrado manito");
         }
       );
