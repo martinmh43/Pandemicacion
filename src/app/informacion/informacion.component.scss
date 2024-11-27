@@ -1,4 +1,50 @@
-.volver{
+$primary-color: #007bff;
+$primary-hover-color: #0056b3;
+$secondary-color: #28a745;
+$secondary-hover-color: #218838;
+
+
+
+.responsive-textbox {
+    position: absolute;
+    transform: translate(90%, 50%);
+    width: 90%; 
+    max-width: 500px; 
+    height: 60%; 
+    max-height: 300px; 
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-family: 'Georgia', serif; 
+    line-height: 1.6; 
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    background-color: #ffffff; 
+    color: #343a40; 
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    resize: none;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+    &::placeholder {
+        color: $secondary-color;
+        font-style: italic;
+    }
+
+    &:hover {
+        border-color: $secondary-hover-color;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); // Resalta al pasar el mouse
+    }
+}
+
+
+
+
+
+
+
+.volver {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -10,7 +56,9 @@
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s;
 }
-.volver:hover{
-    background-color: rgb(164, 6, 138);;
+
+.volver:hover {
+    background-color: rgb(164, 6, 138);
+    ;
     transform: translateY(-2px);
 }

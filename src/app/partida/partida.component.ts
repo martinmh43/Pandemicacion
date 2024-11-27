@@ -51,7 +51,7 @@ export class PartidaComponent {
     console.log(`Has hecho clic en: ${ciudad}`); 
   }
 
-  // Las movidas de cada ciudad aquí
+
 
 
 
