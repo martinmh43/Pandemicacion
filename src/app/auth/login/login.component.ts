@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Usuario} from '../../models/usuarios.model';
+import { Usuario} from '../../models/usuario.model';
 
 @Component({
   selector: 'app-login',
@@ -47,6 +47,7 @@ export class LoginComponent {
 
       this.auth.register(usuario).subscribe(
         response => {
+          console.log(usuario)
           console.log("Registrado manito");
         }
       );

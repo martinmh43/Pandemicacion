@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Usuario } from '../../models/usuarios.model';
+import { Usuario } from '../../models/usuario.model';
 
 @Component({
   selector: 'app-register',
