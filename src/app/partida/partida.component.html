@@ -1,11 +1,19 @@
 <div class="partida-container">
   <div class="map-container">
     <img src="images/mapa.png" alt="Mapa del mundo" class="map-image" />
-     <div *ngFor="let punto of puntos" class="punto" [style.left.px]="punto.x" [style.top.px]="punto.y">
-      <button class="boton-punto" (click)="onPuntoClick(punto.ciudad)">
+    <div *ngFor="let punto of puntos" class="punto" [style.left.px]="punto.x" [style.top.px]="punto.y">
+      <button class="boton-punto" (click)="onPuntoClick(punto)">
       </button>
       <span class="nombre-ciudad">{{ punto.ciudad }}</span>
-    </div> 
+    </div>
   </div>
- <button (click)="routacion('menu')" class="volver">Menu Principal</button> 
-</div> 
+  <button (click)="routacion('menu')" class="volver">Menu Principal</button>
+
+  <div *ngIf="ciudadSeleccionada" class="info-ciudad">
+    <button class="cerrar" (click)="cerrarInfo()">Cerrar</button>
+    <h3>{{ ciudadSeleccionada.ciudad }}</h3>
+    <p *ngFor="let enfermedad of ciudadSeleccionada.enfermedades">
+      {{ enfermedad.nombre }}: Nivel {{ enfermedad.nivel }}
+    </p>
+  </div>>
+</div>
