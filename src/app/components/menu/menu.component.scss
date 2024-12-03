@@ -1,11 +1,11 @@
-$primary-color: #007bff;
-$primary-hover-color: #0056b3;
-$secondary-color: #28a745;
-$secondary-hover-color: #218838;
+$primary-color: #a049c6;
+$primary-hover-color: #9c40af;
+$secondary-color: #3e9c91;
+$secondary-hover-color: #287e77;
 $button-padding: 12px;
 $button-font-size: 18px;
 $button-border-radius: 8px;
-$button-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$button-shadow: 5px 6px 10px rgba(255, 255, 255, 0.347);
 
 .menu-container {
   display: flex;
@@ -18,7 +18,7 @@ $button-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   .profile-button {
     position: absolute;
-    top: 0.5%;
+    top: 2%;
     right: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -39,7 +39,7 @@ $button-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   .profile-button2 {
     position: absolute;
-    top: 7%;
+    top: 8%;
     right: 20px;
     padding: 10px 20px;
     font-size: 16px;

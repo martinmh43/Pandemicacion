@@ -1,64 +1,142 @@
-$primary-color: #007bff;
-$primary-hover-color: #0056b3;
-$secondary-color: #28a745;
-$secondary-hover-color: #218838;
-
-
-
-.responsive-textbox {
-    position: absolute;
-    transform: translate(90%, 50%);
-    width: 90%; 
-    max-width: 500px; 
-    height: 60%; 
-    max-height: 300px; 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .page-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .responsive-textbox {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    min-width: 300px;
+    height: 60%;
+    max-height: 300px;
+    min-height: 150px;
     padding: 1.5rem;
     font-size: 1rem;
-    font-family: 'Georgia', serif; 
-    line-height: 1.6; 
-    border: 2px solid $primary-color;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    border: 2px solid #007bff;
     border-radius: 10px;
-    background-color: #ffffff; 
-    color: #343a40; 
-    overflow-y: scroll; 
-    overflow-x: hidden; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    background-color: #ffffff;
+    color: #343a40;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
     resize: none;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-
-    &::placeholder {
-        color: $secondary-color;
-        font-style: italic;
-    }
-
-    &:hover {
-        border-color: $secondary-hover-color;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); // Resalta al pasar el mouse
-    }
-}
-
-
-
-
-
-
-
-.volver {
+  }
+  
+  .responsive-textbox::placeholder {
+    color: #28a745; /* Utilizando tu $secondary-color */
+    font-style: italic;
+  }
+  
+  .responsive-textbox:hover {
+    border-color: #218838; /* $secondary-hover-color */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .volver {
     position: absolute;
     top: 20px;
     left: 20px;
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    background-color: rgb(194, 16, 164);
+    color: white;
+    background-color: #a049c6;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s;
-}
-
-.volver:hover {
-    background-color: rgb(164, 6, 138);
-    ;
+    z-index: 10; /* Asegúrate de que esté encima del textarea */
+  }
+  
+  .volver:hover {
+    background-color: #9c40af;
     transform: translateY(-2px);
-}
+  }
+  
+  
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+  }
+  .lines .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  .lines .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    -webkit-animation: run 7s 0s infinite;
+            animation: run 7s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  .lines .line:nth-child(1) {
+    margin-left: -25%;
+  }
+  .lines .line:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  .lines .line:nth-child(3) {
+    margin-left: 25%;
+  }
+  .lines .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+  }
+  
+  @-webkit-keyframes run {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+  
+  @keyframes run {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 110%;
+    }
+  }
+  
+  
