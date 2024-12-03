@@ -7,7 +7,9 @@
       <span class="nombre-ciudad">{{ punto.ciudad }}</span>
     </div>
   </div>
-  <button (click)="routacion('menu')" class="volver">Menu Principal</button>
+  <button (click)="routacion('menu')" class="volver">
+    <img src="/public/images/flechaVolver.png" alt="Volver" class="flecha-imagen">
+  </button>
 
   <div *ngIf="ciudadSeleccionada" class="info-ciudad">
     <button class="cerrar" (click)="cerrarInfo()">Cerrar</button>
