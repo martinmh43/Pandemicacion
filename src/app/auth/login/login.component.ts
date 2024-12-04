@@ -35,7 +35,7 @@ export class LoginComponent {
     password: new FormControl('',[Validators.required, Validators.minLength(6)]),
     email: new FormControl('',[Validators.required, Validators.email]),
     message: new FormControl('',[Validators.required])
-  })
+  });
 
   enviar () {
     if (this.miFormulario.valid) {
