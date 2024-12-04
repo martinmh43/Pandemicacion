@@ -7,6 +7,9 @@ $button-font-size: 18px;
 $button-border-radius: 8px;
 $button-shadow: 5px 6px 10px rgba(255, 255, 255, 0.347);
 
+$otroColor: #ffffff;
+$otroColorHover: #2bf8e0;
+
 .menu-container {
   display: flex;
   flex-direction: column;
@@ -14,6 +17,56 @@ $button-shadow: 5px 6px 10px rgba(255, 255, 255, 0.347);
   justify-content: center;
   height: 100vh;
   position: relative;
+
+  .otraOpcion-y-tierra {
+    display: flex; 
+    align-items: center; 
+    gap: 20px;
+    width: 100%; 
+    justify-content: center; 
+
+    .otraOpcion {
+      display: flex;
+      flex-direction: column; 
+      align-items: flex-start; 
+      gap: 10px; 
+      width: auto; 
+      padding: 0; 
+      margin: 0; 
+      background: none; 
+      border: none; 
+      box-shadow: none;
+
+      button {
+        all: unset; 
+        font-size: 16px; 
+        font-weight: bold;
+        color: $otroColor; 
+        cursor: pointer; 
+        margin-left: 0;
+
+        &:hover {
+          color: $otroColorHover; 
+          text-decoration: underline; 
+          transform: translateY(-2px);       
+        }
+
+        &:active {
+          background: darken($otroColorHover, 10%); 
+          transform: translateY(1px); 
+        }
+      }
+    }
+
+    .tierraGira {
+      img {
+        height: auto;
+        width: 77.77%; 
+        object-fit: contain; 
+      }
+    }
+  }
+}
 
 
   .profile-button {
@@ -57,33 +110,3 @@ $button-shadow: 5px 6px 10px rgba(255, 255, 255, 0.347);
       transform: translateY(-2px);
     }
   }
-
-  .menu-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 220px;
-
-    button {
-      padding: $button-padding;
-      font-size: $button-font-size;
-      font-weight: bold;
-      background: linear-gradient(135deg, $primary-color, $primary-hover-color);
-      color: #ffffff;
-      border: none;
-      border-radius: $button-border-radius;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s;
-      box-shadow: $button-shadow;
-
-      &:hover {
-        background: linear-gradient(135deg, $primary-hover-color, darken($primary-hover-color, 10%));
-        transform: translateY(-2px);
-      }
-
-      &:active {
-        transform: translateY(1px);
-      }
-    }
-  }
-}
