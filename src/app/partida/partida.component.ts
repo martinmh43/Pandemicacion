@@ -25,6 +25,7 @@ export class PartidaComponent {
   ngOnInit() {
     this.procesarDatosCiudades();
   }
+  
 
   procesarDatosCiudades() {
     this.http.get<any[]>('assets/ciudades.json').subscribe(data => {
@@ -55,7 +56,9 @@ export class PartidaComponent {
     this.ciudadSeleccionada = punto;
     console.log(`Has hecho clic en: ${punto.ciudad}`);
   }
+  
   cerrarInfo() {
     this.ciudadSeleccionada = null;
   }
+  
 }

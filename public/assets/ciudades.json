@@ -68,7 +68,7 @@
   {
     "nombre": "San Petersburgo",
     "idEnfermedad": 0,
-    "coordenadas": {"x": 838, "y": 170},
+    "coordenadas": {"x": 845, "y": 146},
     "conexiones": ["Essen", "Estambul", "Moscu"]
   },
   {
@@ -170,121 +170,121 @@
   {
     "nombre": "Bagdad",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 903, "y": 280},
+    "coordenadas": {"x": 898, "y": 280},
     "conexiones": ["Estambul", "Karachi", "Riad", "El Cairo"]
   },
   {
     "nombre": "Moscu",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 913, "y": 190},
+    "coordenadas": {"x": 876, "y": 175},
     "conexiones": ["Teheran", "Estambul", "San Petersburgo"]
   },
   {
     "nombre": "Teheran",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 943, "y": 270},
+    "coordenadas": {"x": 932, "y": 265},
     "conexiones": ["Moscu", "Bagdad", "Karachi", "Nueva Delhi"]
   },
   {
     "nombre": "Karachi",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1003, "y": 315},
+    "coordenadas": {"x": 1000, "y": 315},
     "conexiones": ["Teheran", "Bagdad", "Nueva Delhi", "Riad", "Bombay"]
   },
   {
     "nombre": "Bombay",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1028, "y": 355},
+    "coordenadas": {"x": 1022, "y": 352},
     "conexiones": ["Karachi", "Chennai", "Nueva Delhi"]
   },
   {
     "nombre": "Nueva Delhi",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1008, "y": 273},
+    "coordenadas": {"x": 1030, "y": 324},
     "conexiones": ["Teheran", "Karachi", "Bombay", "Calcuta"]
   },
   {
     "nombre": "Calcuta",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1088, "y": 310},
+    "coordenadas": {"x": 1073, "y": 340},
     "conexiones": ["Nueva Delhi", "Bangkok", "Hong Kong", "Chennai"]
   },
   {
     "nombre": "Chennai",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1083, "y": 400},
+    "coordenadas": {"x": 1047, "y": 390},
     "conexiones": ["Bombay", "Calcuta", "Bangkok", "Yakarta"]
   },
   {
     "nombre": "Bangkok",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1138, "y": 375},
+    "coordenadas": {"x": 1130, "y": 365},
     "conexiones": ["Calcuta", "Chennai", "Hong Kong", "Ho Chi Minh", "Yakarta"]
   },
   {
     "nombre": "Yakarta",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1163, "y": 470},
+    "coordenadas": {"x": 1163, "y": 475},
     "conexiones": ["Chennai", "Bangkok", "Ho Chi Minh", "Sidney"]
   },
   {
     "nombre": "Ho Chi Minh",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1188, "y": 430},
+    "coordenadas": {"x": 1153, "y": 393},
     "conexiones": ["Bangkok", "Hong Kong", "Yakarta", "Manila"]
   },
   {
     "nombre": "Hong Kong",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 1188, "y": 340},
+    "coordenadas": {"x": 1175, "y": 340},
     "conexiones": ["Bangkok", "Ho Chi Minh", "Manila", "Shanghai", "Taipei"]
   },
   {
     "nombre": "Shanghai",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1213, "y": 270},
+    "coordenadas": {"x": 1216, "y": 290},
     "conexiones": ["Hong Kong", "Taipei", "Beijing", "Seul", "Tokio"]
   },
   {
     "nombre": "Taipei",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1238, "y": 320},
+    "coordenadas": {"x": 1222, "y": 320},
     "conexiones": ["Shanghai", "Hong Kong", "Osaka", "Manila"]
   },
   {
     "nombre": "Beijing",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1213, "y": 230},
+    "coordenadas": {"x": 1206, "y": 247},
     "conexiones": ["Shanghai", "Seul"]
   },
   {
     "nombre": "Seul",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1243, "y": 200},
+    "coordenadas": {"x": 1246, "y": 262},
     "conexiones": ["Beijing", "Tokio"]
   },
   {
     "nombre": "Tokio",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1298, "y": 225},
+    "coordenadas": {"x": 1300, "y": 240},
     "conexiones": ["Shanghai", "Seul", "Osaka", "San Francisco"]
   },
   {
     "nombre": "Osaka",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1298, "y": 270},
+    "coordenadas": {"x": 1282, "y": 270},
     "conexiones": ["Tokio", "Taipei"]
   },
   {
     "nombre": "Manila",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1232, "y": 370},
+    "coordenadas": {"x": 1220, "y": 370},
     "conexiones": ["Taipei", "Hong Kong", "Ho Chi Minh", "Yakarta", "San Francisco"]
   },
   {
     "nombre": "Sidney",
     "idEnfermedad": 1,
-    "coordenadas": {"x": 1355, "y": 620},
+    "coordenadas": {"x": 1345, "y": 605},
     "conexiones": ["Los Angeles", "Yakarta"]
   }
 ]
