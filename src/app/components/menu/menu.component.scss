@@ -48,12 +48,8 @@ $otroColorHover: #2bf8e0;
         &:hover {
           color: $otroColorHover; 
           text-decoration: underline; 
-          transform: translateY(-2px);       
-        }
-
-        &:active {
-          background: darken($otroColorHover, 10%); 
-          transform: translateY(1px); 
+          transform: translateY(-2px);   
+          transform: scale(1.05);
         }
       }
     }
@@ -108,5 +104,5 @@ $otroColorHover: #2bf8e0;
     &:hover {
       background-color: $secondary-hover-color;
       transform: translateY(-2px);
-    }
+    } 
   }
