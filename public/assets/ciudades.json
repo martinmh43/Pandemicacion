@@ -146,7 +146,7 @@
   {
     "nombre": "Argel",
     "idEnfermedad": 2,
-    "coordenadas": {"x": 733, "y": 264},
+    "coordenadas": {"x": 733, "y": 270},
     "conexiones": ["Madrid", "Paris", "Estambul", "El Cairo"]
   },
   {
