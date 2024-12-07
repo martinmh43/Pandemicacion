@@ -47,8 +47,12 @@ export class LoginComponent {
 
       this.auth.register(usuario).subscribe(
         response => {
-          console.log(usuario)
-          console.log("Registrado manito");
+          if (response.status == 'success'){
+            console.log(response.message);
+            //posible redireccion
+          } else {
+            console.log("Womp womp");
+          }
         }
       );
     } else {
