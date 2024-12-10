@@ -38,36 +38,10 @@ html, body {
     resize: none;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-
-    &::placeholder {
-        color: $secondary-color;
-        font-style: italic;
-    }
-
-    &:hover {
-        border-color: $secondary-hover-color;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
 }
 
-
-
-.volver {
-
-  }
-  
-  .responsive-textbox::placeholder {
-    color: #28a745; /* Utilizando tu $secondary-color */
-    font-style: italic;
-  }
-  
-  .responsive-textbox:hover {
-    border-color: #218838; /* $secondary-hover-color */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
   
   .volver {
-
     position: absolute;
     top: 20px;
     left: 20px;
