@@ -1,13 +1,21 @@
 <div class="menu-container">
-  <button class="profile-button" (click)="routacion('perfil')">Perfil</button>
-  <button class="profile-button2" (click)="routacion('login')">Login</button>
 
-  <div class="menu-buttons">
-    <button (click)="routacion('partida')">Nueva partida</button>
-    <button (click)="routacion('cargar-partida')">Cargar partida</button>
-    <button (click)="routacion('informacion')">Información</button>
-    <button (click)="routacion('ranking')">Ranking</button>
-    <button (click)="routacion('autores')">Autores</button>
-    <button (click)="routacion('versiones')">Versiones</button>
+
+  <div class="otraOpcion-y-tierra">
+    <div class="otraOpcion">
+      <button (click)="routacion('partida')"><h1>Nueva partida</h1></button>
+      <button (click)="routacion('cargar-partida')"><h5>Cargar partida</h5></button>
+      <button (click)="routacion('perfil')">Perfil</button>
+      <button (click)="routacion('login')">Iniciar sesion</button>
+      <button (click)="routacion('informacion')">Información</button>
+      <button (click)="routacion('ranking')">Ranking</button>
+      <button (click)="routacion('autores')">Autores</button>
+      <button (click)="routacion('versiones')">Versiones</button>
+     
+    </div>
+
+    <div class="tierraGira">
+      <img src="images/tierraGira.gif">
+    </div>
   </div>
 </div>
