@@ -38,7 +38,6 @@ html, body {
     resize: none;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-<<<<<<< HEAD
 
     &::placeholder {
         color: $secondary-color;
@@ -53,12 +52,8 @@ html, body {
 
 
 
-
-
-
-
 .volver {
-=======
+
   }
   
   .responsive-textbox::placeholder {
@@ -72,7 +67,7 @@ html, body {
   }
   
   .volver {
->>>>>>> 943c0e0afdbe4ef1aacee2af1ac579ab2b19d0e5
+
     position: absolute;
     top: 20px;
     left: 20px;
