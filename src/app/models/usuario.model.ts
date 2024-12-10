@@ -5,5 +5,4 @@ export interface Usuario {
     password : String | undefined | null;
     email: String | undefined | null;
 
-
 }

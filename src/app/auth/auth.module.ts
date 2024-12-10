@@ -6,15 +6,13 @@ import { MatStepperModule} from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
 import { AuthRoutingModule } from './auth-routing.module';
-import Swal from 'sweetalert2';
 
 
 
 @NgModule({
   declarations:  [
-     LoginComponent  
+     //LoginComponent  
 ],
   imports: [
     CommonModule,
