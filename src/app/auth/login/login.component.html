@@ -1,4 +1,26 @@
-<div class="principal">
+
+<h1>Registro de usuario</h1>
+    <form action="login.php" method="post">
+        <label>Nombre: </label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label>Password: </label>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="submit">Registrarme</button>
+    </form>
+    <button (click)="routacion('menu')" class="volver">
+      <img src="images/flechaVolverb.png" alt="Volver" class="flecha-imagen">
+    </button>
+    <button (click)="routacion('register')">
+      <img src="images/avatar1.png" alt="Registro">
+    </button>
+
+
+
+
+
+
+<!-- <div class="principal">
   <input type="checkbox" id="chk" aria-hidden="true">
 
   <div class="registro">
@@ -33,4 +55,4 @@
 
 <button (click)="routacion('menu')" class="volver">
   <img src="images/flechaVolverb.png" alt="Volver" class="flecha-imagen">
-</button>
+</button> -->

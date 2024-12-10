@@ -9,12 +9,14 @@ import { RankingComponent } from './ranking/ranking.component';
 import { AutoresComponent } from './autores/autores.component';
 import { VersionesComponent } from './versiones/versiones.component';
 import { PerfilUserComponent } from './perfil/perfil.module';
+import { RegisterComponent } from './auth/register/register.component';
 
 export const routes: Routes = [
     { path: '', component: LoginComponent },  // Ruta principal
     { path: 'perfil', component: PerfilUserComponent },
     { path: 'menu', component: MenuComponent }, // Ruta para el menú
     { path: 'login', component: LoginComponent }, // Ruta para login
+    { path: 'register', component: RegisterComponent }, // Ruta para register
     { path: 'partida', component: PartidaComponent }, // Ruta para partida
     { path: 'informacion', component: InformacionComponent }, // Ruta para información
     { path: 'ranking', component: RankingComponent }, // Ruta para ranking

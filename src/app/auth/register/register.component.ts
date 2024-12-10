@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from '../../models/usuario.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,9 +13,13 @@ import { Usuario } from '../../models/usuario.model';
 })
 export class RegisterComponent {
 
-  constructor(private authService:AuthService){
 
+  
+  routacion(name: string) {
+    this.router.navigate([`/${name}`]);
   }
+
+  constructor(private auth:AuthService, private router: Router) { }
 
   miFormulario = new FormGroup({
     nombre: new FormControl('',[Validators.required, Validators.minLength(3), Validators.maxLength(30)]),
@@ -32,7 +37,7 @@ export class RegisterComponent {
         password: undefined
       }
 
-      this.authService.register(usuario).subscribe(
+      this.auth.register(usuario).subscribe(
         response => {
           console.log("Usuario registrado")
         }
