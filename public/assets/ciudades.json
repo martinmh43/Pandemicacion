@@ -1,289 +1,481 @@
 [
   {
     "nombre": "San Francisco",
-    "idEnfermedad": 0,
+    "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 225, "y": 250},
     "conexiones": ["Chicago", "Los Angeles", "Manila", "Tokio"]
   },
   {
     "nombre": "Chicago",
-    "idEnfermedad": 0,
+    "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 355, "y": 236},
     "conexiones": ["San Francisco", "Montreal", "Atlanta", "Mexico DF", "Los Angeles"]
   },
   {
     "nombre": "Atlanta",
-    "idEnfermedad": 0,
+    "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 340, "y": 280},
     "conexiones": ["Chicago", "Miami", "Washington"]
   },
   {
     "nombre": "Montreal",
-    "idEnfermedad": 0,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 425, "y": 213},
     "conexiones": ["Chicago", "Nueva York", "Washington"]
   },
   {
     "nombre": "Nueva York",
-    "idEnfermedad": 0,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 415, "y": 240},
     "conexiones": ["Montreal", "Washington", "Londres", "Madrid"]
   },
   {
     "nombre": "Washington",
-    "idEnfermedad": 0,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 390, "y": 270},
     "conexiones": ["Montreal", "Nueva York", "Atlanta", "Miami"]
   },
   {
     "nombre": "Londres",
-    "idEnfermedad": 0,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 715, "y": 185},
     "conexiones": ["Nueva York", "Madrid", "Paris", "Essen"]
   },
   {
     "nombre": "Madrid",
-    "idEnfermedad": 0,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 703, "y": 243},
     "conexiones": ["Nueva York", "Londres", "Paris", "Sao Paulo", "Argel"]
   },
   {
     "nombre": "Paris",
-    "idEnfermedad": 0,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 730, "y": 211},
     "conexiones": ["Madrid", "Londres", "Essen", "Argel", "Milan"]
   },
   {
     "nombre": "Essen",
-    "idEnfermedad": 0,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 757, "y": 200},
     "conexiones": ["Londres", "Paris", "San Petersburgo", "Milan"]
   },
   {
     "nombre": "Milan",
-    "idEnfermedad": 0,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 765, "y": 225},
     "conexiones": ["Essen", "Paris", "Estambul"]
   },
   {
     "nombre": "San Petersburgo",
-    "idEnfermedad": 0,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 845, "y": 146},
     "conexiones": ["Essen", "Estambul", "Moscu"]
   },
   {
     "nombre": "Los Angeles",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 240, "y": 280},
     "conexiones": ["San Francisco", "Mexico DF", "Chicago", "Sidney"]
   },
   {
     "nombre": "Miami",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 385, "y": 310},
     "conexiones": ["Washington", "Atlanta", "Mexico DF", "Bogota"]
   },
   {
     "nombre": "Mexico DF",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 312, "y": 345},
     "conexiones": ["Los Angeles", "Miami", "Chicago", "Bogota", "Lima"]
   },
   {
     "nombre": "Bogota",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 420, "y": 420},
     "conexiones": ["Miami", "Mexico DF", "Lima", "Sao Paulo", "Buenos Aires"]
   },
   {
     "nombre": "Lima",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 405, "y": 500},
     "conexiones": ["Mexico DF", "Bogota", "Santiago de Chile"]
   },
   {
     "nombre": "Santiago de Chile",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 431, "y": 590},
     "conexiones": ["Lima"]
   },
   {
     "nombre": "Buenos Aires",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 482, "y": 618},
     "conexiones": ["Sao Paulo", "Bogota"]
   },
   {
     "nombre": "Sao Paulo",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 530, "y": 557},
     "conexiones": ["Bogota", "Buenos Aires", "Lagos", "Madrid"]
   },
   {
     "nombre": "Lagos",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 733, "y": 407},
     "conexiones": ["Sao Paulo", "Kinsasa", "Jartum"]
   },
   {
     "nombre": "Kinsasa",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 785, "y": 460},
     "conexiones": ["Lagos", "Jartum", "Johannesburgo"]
   },
   {
     "nombre": "Jartum",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 850, "y": 365},
     "conexiones": ["El Cairo", "Lagos", "Kinsasa", "Johannesburgo"]
   },
   {
     "nombre": "Johannesburgo",
-    "idEnfermedad": 3,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 838, "y": 585},
     "conexiones": ["Kinsasa", "Jartum"]
   },
   {
     "nombre": "Argel",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 733, "y": 270},
     "conexiones": ["Madrid", "Paris", "Estambul", "El Cairo"]
   },
   {
     "nombre": "El Cairo",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 845, "y": 290},
     "conexiones": ["Argel", "Estambul", "Bagdad"]
   },
   {
     "nombre": "Riad",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 910, "y": 330},
     "conexiones": ["El Cairo", "Bagdad", "Karachi"]
   },
   {
     "nombre": "Estambul",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 842, "y": 241},
     "conexiones": ["Argel", "El Cairo", "Bagdad", "Moscu"]
   },
   {
     "nombre": "Bagdad",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 898, "y": 280},
     "conexiones": ["Estambul", "Karachi", "Riad", "El Cairo"]
   },
   {
     "nombre": "Moscu",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 876, "y": 175},
     "conexiones": ["Teheran", "Estambul", "San Petersburgo"]
   },
   {
     "nombre": "Teheran",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 932, "y": 265},
     "conexiones": ["Moscu", "Bagdad", "Karachi", "Nueva Delhi"]
   },
   {
     "nombre": "Karachi",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1000, "y": 315},
     "conexiones": ["Teheran", "Bagdad", "Nueva Delhi", "Riad", "Bombay"]
   },
   {
     "nombre": "Bombay",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1022, "y": 352},
     "conexiones": ["Karachi", "Chennai", "Nueva Delhi"]
   },
   {
     "nombre": "Nueva Delhi",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1030, "y": 324},
     "conexiones": ["Teheran", "Karachi", "Bombay", "Calcuta"]
   },
   {
     "nombre": "Calcuta",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1073, "y": 340},
     "conexiones": ["Nueva Delhi", "Bangkok", "Hong Kong", "Chennai"]
   },
   {
     "nombre": "Chennai",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1047, "y": 390},
     "conexiones": ["Bombay", "Calcuta", "Bangkok", "Yakarta"]
   },
   {
     "nombre": "Bangkok",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1130, "y": 365},
     "conexiones": ["Calcuta", "Chennai", "Hong Kong", "Ho Chi Minh", "Yakarta"]
   },
   {
     "nombre": "Yakarta",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1163, "y": 475},
     "conexiones": ["Chennai", "Bangkok", "Ho Chi Minh", "Sidney"]
   },
   {
     "nombre": "Ho Chi Minh",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1153, "y": 393},
     "conexiones": ["Bangkok", "Hong Kong", "Yakarta", "Manila"]
   },
   {
     "nombre": "Hong Kong",
-    "idEnfermedad": 2,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1175, "y": 340},
     "conexiones": ["Bangkok", "Ho Chi Minh", "Manila", "Shanghai", "Taipei"]
   },
   {
     "nombre": "Shanghai",
-    "idEnfermedad": 1,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1216, "y": 290},
     "conexiones": ["Hong Kong", "Taipei", "Beijing", "Seul", "Tokio"]
   },
   {
     "nombre": "Taipei",
-    "idEnfermedad": 1,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1222, "y": 320},
     "conexiones": ["Shanghai", "Hong Kong", "Osaka", "Manila"]
   },
   {
     "nombre": "Beijing",
-    "idEnfermedad": 1,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1206, "y": 247},
     "conexiones": ["Shanghai", "Seul"]
   },
   {
     "nombre": "Seul",
-    "idEnfermedad": 1,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1246, "y": 262},
     "conexiones": ["Beijing", "Tokio"]
   },
   {
     "nombre": "Tokio",
-    "idEnfermedad": 1,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1300, "y": 240},
     "conexiones": ["Shanghai", "Seul", "Osaka", "San Francisco"]
   },
   {
     "nombre": "Osaka",
-    "idEnfermedad": 1,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1282, "y": 270},
     "conexiones": ["Tokio", "Taipei"]
   },
   {
     "nombre": "Manila",
-    "idEnfermedad": 1,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1220, "y": 370},
     "conexiones": ["Taipei", "Hong Kong", "Ho Chi Minh", "Yakarta", "San Francisco"]
   },
   {
     "nombre": "Sidney",
-    "idEnfermedad": 1,
+        "enfermedades": [
+      { "nombre": "Mondongo-20", "nivel": 0, "idEnfermedad": 1 },
+      { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
+      { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
+    ],
     "coordenadas": {"x": 1345, "y": 605},
     "conexiones": ["Los Angeles", "Yakarta"]
   }

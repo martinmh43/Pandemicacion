@@ -17,5 +17,17 @@
     <p *ngFor="let enfermedad of ciudadSeleccionada.enfermedades">
       {{ enfermedad.nombre }}: Nivel {{ enfermedad.nivel }}
     </p>
-  </div>>
+  </div>
+
+  <button (click)="pasarDeRonda()" class="pasar-ronda">
+    Pasar de Ronda
+  </button>
+
+  <div class="consola">
+    <h3>Consola de Mensajes</h3>
+    <ul>
+      <li *ngFor="let mensaje of consolaMensajes">{{ mensaje }}</li>
+    </ul>
+  </div>
+  
 </div>

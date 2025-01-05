@@ -15,6 +15,9 @@ export class PartidaComponent {
   ciudades: any[] = [];
   puntos: any[] = [];
   ciudadSeleccionada: any = null;
+  primeraRonda: boolean = true;
+  consolaMensajes: string[] = [];
+
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -59,6 +62,59 @@ export class PartidaComponent {
   
   cerrarInfo() {
     this.ciudadSeleccionada = null;
+  }
+
+  pasarDeRonda() {
+    if (this.primeraRonda) {
+      this.asignarNivelesAleatorios(10, 1);
+      this.asignarNivelesAleatorios(8, 2);
+      this.asignarNivelesAleatorios(3, 3);
+      this.primeraRonda = false;
+    } else {
+      this.sumarNivelAleatorio();
+    }
+  }
+
+  asignarNivelesAleatorios(cantidad: number, nivel: number) {
+    const ciudadesAleatorias = this.obtenerCiudadesAleatorias(cantidad);
+    ciudadesAleatorias.forEach(ciudad => {
+      const enfermedadAleatoria = this.obtenerEnfermedadAleatoria(ciudad.enfermedades);
+      if (enfermedadAleatoria) {
+        enfermedadAleatoria.nivel = nivel;
+        this.consolaMensajes.push(`${ciudad.nombre} tiene la enfermedad ${enfermedadAleatoria.nombre} en nivel ${nivel}.`);
+      }
+    });
+  }
+
+  obtenerCiudadesAleatorias(cantidad: number): any[] {
+    const ciudadesCopias = [...this.ciudades];
+    const ciudadesSeleccionadas = [];
+    for (let i = 0; i < cantidad; i++) {
+      if (ciudadesCopias.length === 0) break;
+      const indiceAleatorio = Math.floor(Math.random() * ciudadesCopias.length);
+      ciudadesSeleccionadas.push(ciudadesCopias[indiceAleatorio]);
+      ciudadesCopias.splice(indiceAleatorio, 1);
+    }
+    return ciudadesSeleccionadas;
+  }
+
+  obtenerEnfermedadAleatoria(enfermedades: any[]): any | null {
+    if (enfermedades.length === 0) return null; 
+    const indiceAleatorio = Math.floor(Math.random() * enfermedades.length);
+    return enfermedades[indiceAleatorio];
+  }
+
+  sumarNivelAleatorio() {
+    const ciudadesAleatorias = this.obtenerCiudadesAleatorias(5);
+  
+    ciudadesAleatorias.forEach(ciudad => {
+      const enfermedadAleatoria = this.obtenerEnfermedadAleatoria(ciudad.enfermedades);
+  
+      if (enfermedadAleatoria && enfermedadAleatoria.nivel < 3) {
+        enfermedadAleatoria.nivel += 1;
+        this.consolaMensajes.push(`${ciudad.nombre} tiene la enfermedad ${enfermedadAleatoria.nombre} en nivel ${enfermedadAleatoria.nivel}.`);
+      }
+    });
   }
   
 }

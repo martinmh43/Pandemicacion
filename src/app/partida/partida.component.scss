@@ -116,3 +116,60 @@
   }
 }
 
+
+.pasar-ronda {
+  position: fixed;
+  bottom: 10%;
+  left: 60%;
+  background: #a829bbf9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  transition: 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.pasar-ronda:hover {
+  background: #9b3bc3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.pasar-ronda:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); 
+}
+
+
+.consola {
+  position: fixed;
+  top: 0%; 
+  right: 0.1%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  background-color: #9935d87d;
+  color: #ffffff;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 3;
+
+  h3 {
+    margin: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+}
