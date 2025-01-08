@@ -19,8 +19,9 @@
     </p>
   </div>
 
-  <button (click)="pasarDeRonda()" class="pasar-ronda">
-    Pasar de Ronda
+  <div class="overlay" *ngIf="!haSidoClicado"></div>
+  <button (click)="pasarDeRonda()" [ngClass]="{'mover-boton': haSidoClicado}" class="pasar-ronda">
+    {{ textoBoton }}
   </button>
 
   <div class="consola">

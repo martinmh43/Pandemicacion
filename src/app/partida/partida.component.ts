@@ -17,6 +17,8 @@ export class PartidaComponent {
   ciudadSeleccionada: any = null;
   primeraRonda: boolean = true;
   consolaMensajes: string[] = [];
+  textoBoton: string = 'Empezar partida';
+  haSidoClicado: boolean = false;
 
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -70,6 +72,8 @@ export class PartidaComponent {
       this.asignarNivelesAleatorios(8, 2);
       this.asignarNivelesAleatorios(3, 3);
       this.primeraRonda = false;
+      this.textoBoton = 'Ronda Siguiente';
+      this.haSidoClicado = true;
     } else {
       this.sumarNivelAleatorio();
     }
