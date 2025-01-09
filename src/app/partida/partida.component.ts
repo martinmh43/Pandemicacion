@@ -120,5 +120,25 @@ export class PartidaComponent {
       }
     });
   }
+
+  getColorClass(enfermedades: any[]): string {
+    let maxNivel = 0;
   
+    for (const enfermedad of enfermedades) {
+      if (enfermedad.nivel > maxNivel) {
+        maxNivel = enfermedad.nivel;
+      }
+    }
+  
+    switch (maxNivel) {
+      case 1:
+        return 'nivel-1';
+      case 2:
+        return 'nivel-2';
+      case 3:
+        return 'nivel-3'; 
+      default:
+        return ''; 
+    }
+  }
 }

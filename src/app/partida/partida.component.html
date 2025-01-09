@@ -2,7 +2,9 @@
   <div class="map-container">
     <img src="images/mapa.png" alt="Mapa del mundo" class="map-image" />
     <div *ngFor="let punto of puntos" class="punto" [style.left.px]="punto.x" [style.top.px]="punto.y">
-      <button class="boton-punto" (click)="onPuntoClick(punto)">
+      <button class="boton-punto" 
+              [ngClass]="getColorClass(punto.enfermedades)" 
+              (click)="onPuntoClick(punto)">
       </button>
       <span class="nombre-ciudad">{{ punto.ciudad }}</span>
     </div>
