@@ -17,6 +17,7 @@
       <span class="nombre-ciudad">{{ punto.ciudad }}</span>
     </div>
   </div>
+  
   <button (click)="routacion('menu')" class="volver">
     <img src="images/flechaVolver.png" alt="Volver" class="flecha-imagen">
   </button>
@@ -25,7 +26,12 @@
     <button class="cerrar" (click)="cerrarInfo()">Cerrar</button>
     <h3>{{ ciudadSeleccionada.ciudad }}</h3>
     <p *ngFor="let enfermedad of ciudadSeleccionada.enfermedades">
-      {{ enfermedad.nombre }}: Nivel {{ enfermedad.nivel }}
+        {{ enfermedad.nombre }}: Nivel {{ enfermedad.nivel }}
+        <button *ngIf="curacionesDisponibles > 0 && enfermedad.nivel > 0" 
+                class="curar-button"
+                (click)="curarEnfermedad(ciudadSeleccionada, enfermedad)">
+          Curar
+        </button>
     </p>
   </div>
 
@@ -35,10 +41,14 @@
   </button>
 
   <div class="consola">
-    <h3>Consola de Mensajes</h3>
+    <h4>Consola de Mensajes</h4>
     <ul>
       <li *ngFor="let mensaje of consolaMensajes">{{ mensaje }}</li>
     </ul>
+  </div>
+
+  <div class="curaciones">
+    <h4>Curaciones Disponibles: {{ curacionesDisponibles }}</h4>
   </div>
   
 </div>

@@ -218,3 +218,41 @@
   stroke-width: 2; 
   stroke-linecap: round; 
 }
+
+
+.curaciones {
+  position: fixed;
+  bottom: 5%;
+  right: 22%;
+  background: #a729bbca;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 1000;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.curaciones h4 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.info-ciudad p {
+  margin: 5px 0;
+}
+
+.curar-button {
+  margin-top: 5px;
+  background-color: #6a6a6a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer; 
+  transition: background-color 0.3s;
+}
+
+.curar-button:hover {
+  background-color: #5e5d5d;
+}

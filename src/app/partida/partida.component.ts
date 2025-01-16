@@ -19,6 +19,7 @@ export class PartidaComponent {
   consolaMensajes: string[] = [];
   textoBoton: string = 'Empezar partida';
   haSidoClicado: boolean = false;
+  curacionesDisponibles: number = 5;
 
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -77,6 +78,7 @@ export class PartidaComponent {
       this.haSidoClicado = true;
     } else {
       this.sumarNivelAleatorio();
+      this.curacionesDisponibles = 5;
     }
   }
 
@@ -166,6 +168,18 @@ export class PartidaComponent {
         }
       });
     });
+  }
+
+  curarEnfermedad(ciudad: any, enfermedad: any) {
+    if (this.curacionesDisponibles > 0 && enfermedad.nivel > 0) {
+      enfermedad.nivel -= 1;
+      this.curacionesDisponibles -= 1;
+      this.consolaMensajes.push(`${ciudad.nombre} ha sido curada de ${enfermedad.nombre}. Nivel actual: ${enfermedad.nivel}.`);
+    } else if (enfermedad.nivel === 0) {
+      this.consolaMensajes.push(`La enfermedad ${enfermedad.nombre} en ${ciudad.nombre} ya está en nivel 0.`);
+    } else {
+      this.consolaMensajes.push('No hay clics de curación disponibles.');
+    }
   }
 
 }
