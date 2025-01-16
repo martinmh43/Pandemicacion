@@ -50,6 +50,7 @@ export class PartidaComponent {
         y: ciudad.coordenadasY,
         enfermedades: ciudad.enfermedades
       }));
+      this.calcularLineasConexiones();
 
       console.log('Puntos procesados:', this.puntos);
     }, error => {
@@ -141,4 +142,30 @@ export class PartidaComponent {
         return ''; 
     }
   }
+
+
+
+  lineas: any[] = [];
+
+  calcularLineasConexiones() {
+    this.lineas = [];
+  
+    this.ciudades.forEach(ciudad => {
+      const ciudadOrigen = this.puntos.find(p => p.ciudad === ciudad.nombre);
+  
+      ciudad.conexiones.forEach((conexion: string) => { 
+        const ciudadDestino = this.puntos.find(p => p.ciudad === conexion);
+  
+        if (ciudadOrigen && ciudadDestino) {
+          this.lineas.push({
+            x1: ciudadOrigen.x,
+            y1: ciudadOrigen.y,
+            x2: ciudadDestino.x,
+            y2: ciudadDestino.y
+          });
+        }
+      });
+    });
+  }
+
 }
