@@ -22,7 +22,7 @@
     <img src="images/flechaVolver.png" alt="Volver" class="flecha-imagen">
   </button>
 
-  <div *ngIf="ciudadSeleccionada" class="info-ciudad">
+<div *ngIf="ciudadSeleccionada" class="info-ciudad">
     <button class="cerrar" (click)="cerrarInfo()">Cerrar</button>
     <h3>{{ ciudadSeleccionada.ciudad }}</h3>
     <p *ngFor="let enfermedad of ciudadSeleccionada.enfermedades">
@@ -32,8 +32,13 @@
                 (click)="curarEnfermedad(ciudadSeleccionada, enfermedad)">
           Curar
         </button>
+        <button *ngIf="vacunaDesarrollada(enfermedad)" 
+                class="vacunar-button"
+                (click)="vacunarEnfermedad(ciudadSeleccionada, enfermedad)">
+          Vacunar
+        </button>
     </p>
-  </div>
+</div>
 
   <div class="overlay" *ngIf="!haSidoClicado"></div>
   <button (click)="pasarDeRonda()" [ngClass]="{'mover-boton': haSidoClicado}" class="pasar-ronda">
@@ -49,6 +54,13 @@
 
   <div class="curaciones">
     <h4>Curaciones Disponibles: {{ curacionesDisponibles }}</h4>
+  </div>
+  
+  <div class="vacunas">
+    <h4>Vacunas</h4>
+    <div *ngFor="let vacuna of vacunas; let i = index">
+      <button class="desarrollar-button" (click)="desarrollarVacuna(i)">Desarrollar {{ vacuna.nombre }}</button>
+    </div>
   </div>
   
 </div>

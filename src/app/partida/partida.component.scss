@@ -256,3 +256,60 @@
 .curar-button:hover {
   background-color: #5e5d5d;
 }
+
+//vacunas
+.vacunas {
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 1000;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vacunas h4 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #282828;
+}
+
+.desarrollar-button {
+  margin-top: 5px;
+  background-color: #a829bb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer; 
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+.desarrollar-button:hover {
+  background-color: #9b3bc3;
+  transform: scale(1.05);
+}
+
+.desarrollar-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.vacunar-button {
+  margin-top: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer; 
+  transition: background-color 0.3s;
+}
+
+.vacunar-button:hover {
+  background-color: #45a049;
+}

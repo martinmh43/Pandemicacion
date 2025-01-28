@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Vacuna } from '../models/vacuna.model';
 
 @Component({
   selector: 'app-partida',
@@ -20,6 +21,12 @@ export class PartidaComponent {
   textoBoton: string = 'Empezar partida';
   haSidoClicado: boolean = false;
   curacionesDisponibles: number = 5;
+
+  vacunas: Vacuna[] = [
+    { nombre: 'Vacuna Mondongo-20', desarrollada: false, rondasParaDesarrollo: 0 },
+    { nombre: 'Vacuna Denge-Venge', desarrollada: false, rondasParaDesarrollo: 0 },
+    { nombre: 'Vacuna Skibidi', desarrollada: false, rondasParaDesarrollo: 0 },
+];
 
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -71,17 +78,27 @@ export class PartidaComponent {
   pasarDeRonda() {
     this.consolaMensajes = [];
     if (this.primeraRonda) {
-      this.asignarNivelesAleatorios(10, 1);
-      this.asignarNivelesAleatorios(8, 2);
-      this.asignarNivelesAleatorios(3, 3);
-      this.primeraRonda = false;
-      this.textoBoton = 'Ronda Siguiente';
-      this.haSidoClicado = true;
+        this.asignarNivelesAleatorios(10, 1);
+        this.asignarNivelesAleatorios(8, 2);
+        this.asignarNivelesAleatorios(3, 3);
+        this.primeraRonda = false;
+        this.textoBoton = 'Ronda Siguiente';
+        this.haSidoClicado = true;
     } else {
-      this.sumarNivelAleatorio();
-      this.curacionesDisponibles = 5;
+        this.sumarNivelAleatorio();
+        this.curacionesDisponibles = 5;
+
+        //vacunas
+        this.vacunas.forEach(vacuna => {
+            if (vacuna.desarrollada) {
+                vacuna.rondasParaDesarrollo -= 1;
+                if (vacuna.rondasParaDesarrollo <= 0) {
+                    this.consolaMensajes.push(`La vacuna ${vacuna.nombre} está lista. Puedes usarla.`);
+                }
+            }
+        });
     }
-  }
+}
 
   asignarNivelesAleatorios(cantidad: number, nivel: number) {
     const ciudadesAleatorias = this.obtenerCiudadesAleatorias(cantidad);
@@ -147,7 +164,6 @@ export class PartidaComponent {
   }
 
 
-
   lineas: any[] = [];
 
   calcularLineasConexiones() {
@@ -182,5 +198,36 @@ export class PartidaComponent {
       this.consolaMensajes.push('No hay clics de curación disponibles.');
     }
   }
+
+  desarrollarVacuna(index: number) {
+    const vacuna = this.vacunas[index];
+    if (this.curacionesDisponibles >= 5 && !vacuna.desarrollada) {
+        this.curacionesDisponibles -= 5;
+        vacuna.rondasParaDesarrollo = Math.floor(Math.random() * 4) + 4; // Entre 4 y 7 rondas
+        vacuna.desarrollada = true;
+        this.consolaMensajes.push(`${vacuna.nombre} en desarrollo. Tardará ${vacuna.rondasParaDesarrollo} rondas.`);
+    } else if (vacuna.desarrollada) {
+        this.consolaMensajes.push(`${vacuna.nombre} ya está en desarrollo.`);
+    } else {
+        this.consolaMensajes.push('No tienes suficientes curaciones para desarrollar una vacuna.');
+    }
+}
+  
+  vacunaDesarrollada(enfermedad: any): boolean {
+    const vacuna = this.vacunas.find(v => v.nombre === `Vacuna ${enfermedad.nombre}`);
+    return vacuna ? vacuna.desarrollada : false;
+}
+
+vacunarEnfermedad(ciudad: any, enfermedad: any) {
+  const vacuna = this.vacunas.find(v => v.nombre === `Vacuna ${enfermedad.nombre}`);
+  if (vacuna && vacuna.desarrollada && vacuna.rondasParaDesarrollo <= 0) {
+      enfermedad.nivel = 0; 
+      this.consolaMensajes.push(`La vacuna usada en ${enfermedad.nombre} en ${ciudad.nombre}`);
+  } else if (vacuna && vacuna.desarrollada) {
+      this.consolaMensajes.push(`La vacuna para ${enfermedad.nombre} aún no está lista`);
+  } else {
+      this.consolaMensajes.push(`La vacuna para ${enfermedad.nombre} no está desarrollada`);
+  }
+}
 
 }
