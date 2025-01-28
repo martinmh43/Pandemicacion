@@ -69,6 +69,7 @@ export class PartidaComponent {
   }
 
   pasarDeRonda() {
+    this.consolaMensajes = [];
     if (this.primeraRonda) {
       this.asignarNivelesAleatorios(10, 1);
       this.asignarNivelesAleatorios(8, 2);

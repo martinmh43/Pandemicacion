@@ -5,10 +5,10 @@
       <line *ngFor="let linea of lineas" 
             [attr.x1]="linea.x1" [attr.y1]="linea.y1" 
             [attr.x2]="linea.x2" [attr.y2]="linea.y2" 
-            class="linea" />
+            class="linea"/>
     </svg>
 
-    <img src="images/mapa.png" alt="Mapa del mundo" class="map-image" />
+    <img src="images/mapa.png" alt="Mapa del mundo" class="map-image"/>
     <div *ngFor="let punto of puntos" class="punto" [style.left.px]="punto.x" [style.top.px]="punto.y">
       <button class="boton-punto" 
               [ngClass]="getColorClass(punto.enfermedades)" 
