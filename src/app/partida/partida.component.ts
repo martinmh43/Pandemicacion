@@ -220,6 +220,9 @@ export class PartidaComponent {
 
 vacunarEnfermedad(ciudad: any, enfermedad: any) {
   const vacuna = this.vacunas.find(v => v.nombre === `Vacuna ${enfermedad.nombre}`);
+
+  if (this.curacionesDisponibles >= 4) {
+    this.curacionesDisponibles -= 4;
   if (vacuna && vacuna.desarrollada && vacuna.rondasParaDesarrollo <= 0) {
       enfermedad.nivel = 0; 
       this.consolaMensajes.push(`La vacuna usada en ${enfermedad.nombre} en ${ciudad.nombre}`);
@@ -229,5 +232,5 @@ vacunarEnfermedad(ciudad: any, enfermedad: any) {
       this.consolaMensajes.push(`La vacuna para ${enfermedad.nombre} no está desarrollada`);
   }
 }
-
+}
 }
