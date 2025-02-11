@@ -21,6 +21,7 @@ export class PartidaComponent {
   textoBoton: string = 'Empezar partida';
   haSidoClicado: boolean = false;
   curacionesDisponibles: number = 5;
+  rondas: number =0;
 
   vacunas: Vacuna[] = [
     { nombre: 'Vacuna Mondongo-20', desarrollada: false, rondasParaDesarrollo: 0 },
@@ -77,6 +78,18 @@ export class PartidaComponent {
 
   pasarDeRonda() {
     this.consolaMensajes = [];
+    this.rondas++;
+
+    const ciudadesConNivel3 = this.ciudades.filter(ciudad => 
+      ciudad.enfermedades.some((enfermedad: { nivel: number; }) => enfermedad.nivel === 3)
+  );
+
+  if (ciudadesConNivel3.length >= 10) {
+    alert(`¡Has perdido! Aguantaste ${this.rondas} rondas.`);
+    this.reiniciarJuego();
+    return; 
+}
+
     if (this.primeraRonda) {
         this.asignarNivelesAleatorios(10, 1);
         this.asignarNivelesAleatorios(8, 2);
@@ -111,6 +124,7 @@ export class PartidaComponent {
     });
   }
 
+  //al pasar de ronda y en la primera que en ciudades ramdom se genere una nueva enfermedad
   obtenerCiudadesAleatorias(cantidad: number): any[] {
     const ciudadesCopias = [...this.ciudades];
     const ciudadesSeleccionadas = [];
@@ -142,6 +156,7 @@ export class PartidaComponent {
     });
   }
 
+  //colores para los distintos niveles de enfermedad
   getColorClass(enfermedades: any[]): string {
     let maxNivel = 0;
   
@@ -199,11 +214,12 @@ export class PartidaComponent {
     }
   }
 
+  //desarrollar la vacuna, tarda aleatoriaente entre 4 y 7 rondas, a suertes
   desarrollarVacuna(index: number) {
     const vacuna = this.vacunas[index];
     if (this.curacionesDisponibles >= 5 && !vacuna.desarrollada) {
         this.curacionesDisponibles -= 5;
-        vacuna.rondasParaDesarrollo = Math.floor(Math.random() * 4) + 4; // Entre 4 y 7 rondas
+        vacuna.rondasParaDesarrollo = Math.floor(Math.random() * 4) + 4; // entre 4 y 7 rondas
         vacuna.desarrollada = true;
         this.consolaMensajes.push(`${vacuna.nombre} en desarrollo. Tardará ${vacuna.rondasParaDesarrollo} rondas.`);
     } else if (vacuna.desarrollada) {
@@ -212,7 +228,7 @@ export class PartidaComponent {
         this.consolaMensajes.push('No tienes suficientes curaciones para desarrollar una vacuna.');
     }
 }
-  
+  //se muestran los botones de vacunar cuando esa vacuna esta desarrollada
   vacunaDesarrollada(enfermedad: any): boolean {
     const vacuna = this.vacunas.find(v => v.nombre === `Vacuna ${enfermedad.nombre}`);
     return vacuna ? vacuna.desarrollada : false;
@@ -232,5 +248,22 @@ vacunarEnfermedad(ciudad: any, enfermedad: any) {
       this.consolaMensajes.push(`La vacuna para ${enfermedad.nombre} no está desarrollada`);
   }
 }
+}
+
+reiniciarJuego() {
+  this.ciudades = [];
+  this.puntos = [];
+  this.ciudadSeleccionada = null;
+  this.primeraRonda = true;
+  this.consolaMensajes = [];
+  this.textoBoton = 'Empezar partida';
+  this.haSidoClicado = false;
+  this.curacionesDisponibles = 5;
+  this.vacunas.forEach(vacuna => {
+      vacuna.desarrollada = false;
+      vacuna.rondasParaDesarrollo = 0;
+  });
+  this.rondas = 0;
+  this.procesarDatosCiudades(); 
 }
 }
