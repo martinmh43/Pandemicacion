@@ -93,7 +93,7 @@ export class PartidaComponent {
     if (this.primeraRonda) {
         this.asignarNivelesAleatorios(10, 1);
         this.asignarNivelesAleatorios(8, 2);
-        this.asignarNivelesAleatorios(3, 3);
+        this.asignarNivelesAleatorios(3, 3);    
         this.primeraRonda = false;
         this.textoBoton = 'Ronda Siguiente';
         this.haSidoClicado = true;
@@ -263,7 +263,11 @@ reiniciarJuego() {
       vacuna.desarrollada = false;
       vacuna.rondasParaDesarrollo = 0;
   });
-  this.rondas = 0;
+  this.asignarNivelesAleatorios(10, 1);
+  this.asignarNivelesAleatorios(8, 2);
+  this.asignarNivelesAleatorios(3, 3);  this.rondas = 0;
   this.procesarDatosCiudades(); 
 }
+
+
 }
