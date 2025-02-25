@@ -20,7 +20,7 @@ export class PartidaComponent {
   consolaMensajes: string[] = [];
   textoBoton: string = 'Empezar partida';
   haSidoClicado: boolean = false;
-  curacionesDisponibles: number = 50;
+  curacionesDisponibles: number = 5;
   rondas: number =0;
   enfermedadesEliminadas: string[] = [];
 
