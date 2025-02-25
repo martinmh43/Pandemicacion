@@ -20,8 +20,9 @@ export class PartidaComponent {
   consolaMensajes: string[] = [];
   textoBoton: string = 'Empezar partida';
   haSidoClicado: boolean = false;
-  curacionesDisponibles: number = 5;
+  curacionesDisponibles: number = 50;
   rondas: number =0;
+  enfermedadesEliminadas: string[] = [];
 
   vacunas: Vacuna[] = [
     { nombre: 'Vacuna Mondongo-20', desarrollada: false, rondasParaDesarrollo: 0 },
@@ -138,9 +139,10 @@ export class PartidaComponent {
   }
 
   obtenerEnfermedadAleatoria(enfermedades: any[]): any | null {
-    if (enfermedades.length === 0) return null; 
-    const indiceAleatorio = Math.floor(Math.random() * enfermedades.length);
-    return enfermedades[indiceAleatorio];
+    const enfermedadesDisponibles = enfermedades.filter(e => !this.enfermedadesEliminadas.includes(e.nombre));
+    if (enfermedadesDisponibles.length === 0) return null; 
+    const indiceAleatorio = Math.floor(Math.random() * enfermedadesDisponibles.length);
+    return enfermedadesDisponibles[indiceAleatorio];
   }
 
   sumarNivelAleatorio() {
@@ -149,9 +151,23 @@ export class PartidaComponent {
     ciudadesAleatorias.forEach(ciudad => {
       const enfermedadAleatoria = this.obtenerEnfermedadAleatoria(ciudad.enfermedades);
   
-      if (enfermedadAleatoria && enfermedadAleatoria.nivel < 3) {
-        enfermedadAleatoria.nivel += 1;
-        this.consolaMensajes.push(`${ciudad.nombre} tiene la enfermedad ${enfermedadAleatoria.nombre} en nivel ${enfermedadAleatoria.nivel}.`);
+      if (enfermedadAleatoria) {
+        if (enfermedadAleatoria.nivel < 3) {
+          enfermedadAleatoria.nivel += 1;
+          this.consolaMensajes.push(`${ciudad.nombre} tiene la enfermedad ${enfermedadAleatoria.nombre} en nivel ${enfermedadAleatoria.nivel}.`);
+        } else {
+          // Pasa la enfermedad a ciudades adyacentes si ya esta a nivel 3
+          ciudad.conexiones.forEach((nombreCiudadVecina: string) => {
+            const ciudadVecina = this.ciudades.find(c => c.nombre === nombreCiudadVecina);
+            if (ciudadVecina) {
+              const enfermedadEnVecina = ciudadVecina.enfermedades.find((e: { nombre: string; nivel: number }) => e.nombre === enfermedadAleatoria.nombre);
+              if (enfermedadEnVecina && enfermedadEnVecina.nivel < 3) {
+                enfermedadEnVecina.nivel += 1;
+                this.consolaMensajes.push(`La enfermedad ${enfermedadEnVecina.nombre} se propagó de ${ciudad.nombre} a ${ciudadVecina.nombre}. Nivel actual: ${enfermedadEnVecina.nivel}.`);
+              }
+            }
+          });
+        }
       }
     });
   }
@@ -207,12 +223,23 @@ export class PartidaComponent {
       enfermedad.nivel -= 1;
       this.curacionesDisponibles -= 1;
       this.consolaMensajes.push(`${ciudad.nombre} ha sido curada de ${enfermedad.nombre}. Nivel actual: ${enfermedad.nivel}.`);
+      
+      // Verificar si la enfermedad ha sido completamente eliminada
+      const enfermedadSigueExistiendo = this.ciudades.some(c => 
+        c.enfermedades.some((e: { nombre: string; nivel: number }) => e.nombre === enfermedad.nombre && e.nivel > 0)
+      );
+
+      if (!enfermedadSigueExistiendo && !this.enfermedadesEliminadas.includes(enfermedad.nombre)) {
+        this.enfermedadesEliminadas.push(enfermedad.nombre);
+        this.consolaMensajes.push(`La enfermedad ${enfermedad.nombre} ha sido erradicada del mapa y no volverá a aparecer.`);
+      }
     } else if (enfermedad.nivel === 0) {
       this.consolaMensajes.push(`La enfermedad ${enfermedad.nombre} en ${ciudad.nombre} ya está en nivel 0.`);
     } else {
       this.consolaMensajes.push('No hay clics de curación disponibles.');
     }
   }
+
 
   //desarrollar la vacuna, tarda aleatoriaente entre 4 y 7 rondas, a suertes
   desarrollarVacuna(index: number) {
