@@ -112,6 +112,16 @@ export class PartidaComponent {
             }
         });
     }
+
+    const todasLasCiudadesCuradas = this.ciudades.every(ciudad => 
+      ciudad.enfermedades.every((enfermedad: { nivel: number; }) => enfermedad.nivel === 0)
+  );
+
+  if (todasLasCiudadesCuradas) {
+      alert(`¡Has ganado! Has curado todas las enfermedades y sobreviviste ${this.rondas} rondas.`);
+      this.reiniciarJuego();
+      return; 
+  }
 }
 
   asignarNivelesAleatorios(cantidad: number, nivel: number) {
