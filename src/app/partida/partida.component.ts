@@ -23,6 +23,7 @@ export class PartidaComponent {
   curacionesDisponibles: number = 5;
   rondas: number =0;
   enfermedadesEliminadas: string[] = [];
+  
 
   vacunas: Vacuna[] = [
     { nombre: 'Vacuna Mondongo-20', desarrollada: false, rondasParaDesarrollo: 0 },
