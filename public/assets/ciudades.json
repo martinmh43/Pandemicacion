@@ -6,7 +6,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 225, "y": 250},
+    "coordenadas": {"x": 195, "y": 220},
     "conexiones": ["Chicago", "Los Angeles", "Manila", "Tokio"]
   },
   {
@@ -16,7 +16,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 355, "y": 236},
+    "coordenadas": {"x": 305, "y": 206},
     "conexiones": ["San Francisco", "Montreal", "Atlanta", "Mexico DF", "Los Angeles"]
   },
   {
@@ -26,7 +26,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 340, "y": 280},
+    "coordenadas": {"x": 315, "y": 240},
     "conexiones": ["Chicago", "Miami", "Washington"]
   },
   {
@@ -36,7 +36,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 425, "y": 213},
+    "coordenadas": {"x": 325, "y": 175},
     "conexiones": ["Chicago", "Nueva York", "Washington"]
   },
   {
@@ -46,7 +46,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 415, "y": 240},
+    "coordenadas": {"x": 335, "y": 215},
     "conexiones": ["Montreal", "Washington", "Londres", "Madrid"]
   },
   {
@@ -56,7 +56,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 390, "y": 270},
+    "coordenadas": {"x": 360, "y": 190},
     "conexiones": ["Montreal", "Nueva York", "Atlanta", "Miami"]
   },
   {
@@ -66,7 +66,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 715, "y": 185},
+    "coordenadas": {"x": 605, "y": 155},
     "conexiones": ["Nueva York", "Madrid", "Paris", "Essen"]
   },
   {
@@ -76,7 +76,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 703, "y": 243},
+    "coordenadas":{"x": 595, "y": 210},
     "conexiones": ["Nueva York", "Londres", "Paris", "Sao Paulo", "Argel"]
   },
   {
@@ -86,7 +86,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 730, "y": 211},
+    "coordenadas": {"x": 618, "y": 190},
     "conexiones": ["Madrid", "Londres", "Essen", "Argel", "Milan"]
   },
   {
@@ -96,7 +96,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 757, "y": 200},
+    "coordenadas": {"x": 670, "y": 160},
     "conexiones": ["Londres", "Paris", "San Petersburgo", "Milan"]
   },
   {
@@ -106,7 +106,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 765, "y": 225},
+    "coordenadas": {"x": 660, "y": 200},
     "conexiones": ["Essen", "Paris", "Estambul"]
   },
   {
@@ -116,7 +116,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 845, "y": 146},
+    "coordenadas": {"x": 713, "y": 125},
     "conexiones": ["Essen", "Estambul", "Moscu"]
   },
   {
@@ -136,7 +136,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 385, "y": 310},
+    "coordenadas": {"x": 325, "y": 265},
     "conexiones": ["Washington", "Atlanta", "Mexico DF", "Bogota"]
   },
   {
@@ -146,7 +146,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 312, "y": 345},
+    "coordenadas": {"x": 300, "y": 305},
     "conexiones": ["Los Angeles", "Miami", "Chicago", "Bogota", "Lima"]
   },
   {
@@ -156,7 +156,7 @@
       { "nombre": "Denge-Venge", "nivel": 0, "idEnfermedad": 2 },
       { "nombre": "Skibidi", "nivel": 0, "idEnfermedad": 3 }
     ],
-    "coordenadas": {"x": 420, "y": 420},
+    "coordenadas": {"x": 370, "y": 370},
     "conexiones": ["Miami", "Mexico DF", "Lima", "Sao Paulo", "Buenos Aires"]
   },
   {
