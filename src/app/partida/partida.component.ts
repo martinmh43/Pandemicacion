@@ -279,7 +279,7 @@ vacunarEnfermedad(ciudad: any, enfermedad: any) {
     this.curacionesDisponibles -= 4;
   if (vacuna && vacuna.desarrollada && vacuna.rondasParaDesarrollo <= 0) {
       enfermedad.nivel = 0; 
-      this.consolaMensajes.push(`La vacuna usada en ${enfermedad.nombre} en ${ciudad.nombre}`);
+      this.consolaMensajes.push(`La vacuna usada en ${enfermedad.nombre} ha sido un exito`);
   } else if (vacuna && vacuna.desarrollada) {
       this.consolaMensajes.push(`La vacuna para ${enfermedad.nombre} aún no está lista`);
   } else {
