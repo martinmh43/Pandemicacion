@@ -1,13 +1,14 @@
 .partida-container {
   position: relative;
   user-select: none;  
+
 }
 
 .map-container {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: white;
+  background-color: rgb(95, 210, 252);
 }
 
 
@@ -43,8 +44,8 @@
 
 .volver {
   position: absolute;
-  bottom: 30px;
-  left: 20px;
+  bottom: 6%;
+  left: 2%;
   padding: 0;
   background: none;
   border: none;
@@ -125,7 +126,7 @@
 
 
 .pasar-ronda {
-  position: fixed;
+  position: absolute;
   top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%);
@@ -152,13 +153,13 @@
 }
 
 .mover-boton {
-  top: 10%; 
-  left: 60%; 
+  top: 91%; 
+  left: 53%; 
 }
 
 
 .consola {
-  position: fixed;
+  position: absolute;
   top: 0%; 
   right: 0.1%;
   border: 1px solid #ccc;
@@ -217,7 +218,7 @@
 
 
 .curaciones {
-  position: fixed;
+  position: absolute;
   bottom: 5%;
   right: 22%;
   background: #a729bb95;
@@ -255,7 +256,7 @@
 
 //vacunas
 .vacunas {
-  position: fixed;
+  position: absolute;
   bottom: 5%;
   left: 5%;
   z-index: 3;
@@ -313,5 +314,20 @@
   background-color: #45a049;
 }
 
+@media (max-width: 768px) {
+  .curaciones, .vacunas {
+    width: 25%;   
+    left: 10%;   
+  }
+  
+  .vacunas {
+    left: 5%;     
+    bottom: 35%;
+  }
 
+  .curaciones {
+    left: 5%;    
+    bottom: 13%;
+  }
+}
 
