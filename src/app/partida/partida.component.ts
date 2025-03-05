@@ -308,4 +308,28 @@ reiniciarJuego() {
 }
 
 
+escala: number = 1; // Zoom inicial
+  transformOrigin: string = "center center"; // Punto de zoom inicial
+
+  hacerZoom(event: WheelEvent) {
+    
+
+    let container = event.currentTarget as HTMLElement;
+
+    // Obtener la posición del mouse dentro del contenedor
+    let mouseX = event.clientX - container.getBoundingClientRect().left;
+    let mouseY = event.clientY - container.getBoundingClientRect().top;
+
+    // Actualizar el punto de origen del zoom
+    this.transformOrigin = `${mouseX}px ${mouseY}px`;
+
+    // Aplicar el zoom
+    if (event.deltaY < 0) {
+      this.escala = Math.min(this.escala + 0.1, 2); // Máximo 2x
+    } else {
+      this.escala = Math.max(this.escala - 0.1, 0.5); // Mínimo 0.5x
+    }
+  }
+
+
 }

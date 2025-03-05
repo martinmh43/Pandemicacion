@@ -1,5 +1,8 @@
-<div class="partida-container">
-  <div class="map-container">
+<div class="partida-container" (wheel)="hacerZoom($event)">
+  
+  <!-- Contenedor del Mapa con Zoom -->
+  <div class="map-container" 
+       [ngStyle]="{'transform': 'scale(' + escala + ')', 'transform-origin': transformOrigin}">
 
     <svg class="lineas-conexiones">
       <line *ngFor="let linea of lineas" 
@@ -9,7 +12,9 @@
     </svg>
 
     <img src="images/mapa.png" alt="Mapa del mundo" class="map-image"/>
-    <div *ngFor="let punto of puntos" class="punto" [style.left.px]="punto.x" [style.top.px]="punto.y">
+
+    <div *ngFor="let punto of puntos" class="punto" 
+         [style.left.px]="punto.x" [style.top.px]="punto.y">
       <button class="boton-punto" 
               [ngClass]="getColorClass(punto.enfermedades)" 
               (click)="onPuntoClick(punto)">
@@ -17,12 +22,14 @@
       <span class="nombre-ciudad">{{ punto.ciudad }}</span>
     </div>
   </div>
-  
+
+  <!-- Botón de Volver -->
   <button (click)="routacion('menu')" class="volver">
     <img src="images/flechaVolver.png" alt="Volver" class="flecha-imagen">
   </button>
 
-<div *ngIf="ciudadSeleccionada" class="info-ciudad">
+  <!-- Información de la Ciudad Seleccionada -->
+  <div *ngIf="ciudadSeleccionada" class="info-ciudad">
     <button class="cerrar" (click)="cerrarInfo()">Cerrar</button>
     <h3>{{ ciudadSeleccionada.ciudad }}</h3>
     <p *ngFor="let enfermedad of ciudadSeleccionada.enfermedades">
@@ -38,13 +45,17 @@
           Vacunar
         </button>
     </p>
-</div>
+  </div>
 
+  <!-- Overlay para Bloquear Acciones Iniciales -->
   <div class="overlay" *ngIf="!haSidoClicado"></div>
+
+  <!-- Botón para Pasar de Ronda -->
   <button (click)="pasarDeRonda()" [ngClass]="{'mover-boton': haSidoClicado}" class="pasar-ronda">
     {{ textoBoton }}
   </button>
 
+  <!-- Consola de Mensajes -->
   <div class="consola">
     <h4>Consola de Mensajes</h4>
     <ul>
@@ -52,15 +63,17 @@
     </ul>
   </div>
 
+  <!-- Sección de Curaciones -->
   <div class="curaciones">
     <h4>Curaciones Disponibles: {{ curacionesDisponibles }}</h4>
   </div>
   
+  <!-- Sección de Vacunas -->
   <div class="vacunas">
     <h4>Vacunas</h4>
     <div *ngFor="let vacuna of vacunas; let i = index">
       <button class="desarrollar-button" (click)="desarrollarVacuna(i)">Desarrollar {{ vacuna.nombre }}</button>
     </div>
   </div>
-  
+
 </div>

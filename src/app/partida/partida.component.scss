@@ -7,7 +7,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 
 
@@ -164,10 +164,10 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-  margin-top: 5px;
+  margin-top: 2%;
   background-color: #9935d87d;
   color: #ffffff;
-  max-height: 200px;
+  max-height: 10%;
   overflow-y: auto;
   z-index: 3;
 
@@ -312,3 +312,6 @@
 .vacunar-button:hover {
   background-color: #45a049;
 }
+
+
+
